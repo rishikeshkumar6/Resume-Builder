@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn with Ninja 
+          Learn with ninja bros
         </a>
       </header>
     </div>
