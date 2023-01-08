@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Navbar.css";
 import { AppBar, Box, createTheme, Divider, Drawer, IconButton, List, ThemeProvider, Toolbar, Typography } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
@@ -14,7 +14,7 @@ const theme = createTheme({
 
 
 const Navbar = (props) => {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState (false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -23,11 +23,11 @@ const Navbar = (props) => {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         <NavLink to="/">
-          {" "}
+          
           <img
             src="https://www.almabetter.com/_next/image?url=https%3A%2F%2Falmablog-media.s3.ap-south-1.amazonaws.com%2Flogo1_edfc81b31b.png&w=256&q=75"
             height="30px"
-            alt="Alma Better"
+            alt="Logo"
           />
         </NavLink>
       </Typography>
@@ -58,14 +58,14 @@ const Navbar = (props) => {
     <>
       <Box sx={{ display: "flex"  }}>
         <ThemeProvider theme={theme}  >
-          <AppBar component="nav" position="sticky" className='appbar' sx={{ color: "primary", boxShadow: "12" }} >
-            <Toolbar id="toolbar" >
-              <IconButton color='inherit' aria-label='open drawer' edge="start" id='icon' onClick={handleDrawerToggle}
+          <AppBar  className='Appbar' sx={{ boxShadow: "5" }} >
+            <Toolbar >
+              <IconButton color='inherit' id='icon' onClick={handleDrawerToggle}
                 sx={{ mr: 2, display: { sm: "none" } }} >
                 <MenuIcon />
               </IconButton>
 
-              <Typography variant='h6' component="div" sx={{ 
+              <Typography variant='h6' sx={{ 
                 flexGrow: 1,
                 display: { sm: "block" },
                 fontSize: "25px",
@@ -73,11 +73,11 @@ const Navbar = (props) => {
                 top: "5px",
               }}>
                 <NavLink to="/">
-                  {" "}
+                  
                   <img
-                    src="https://www.almabetter.com/_next/image?url=https%3A%2F%2Falmablog-media.s3.ap-south-1.amazonaws.com%2Flogo1_edfc81b31b.png&w=256&q=75"
+                    src="http://resumewritingninja.com/wp-content/uploads/2021/08/High_Resolution-011-scaled-e1630103992865.jpg"
                     height="30px"
-                    alt="Alma Better" />
+                    alt="Logo" />
                 </NavLink>
               </Typography>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
@@ -96,18 +96,15 @@ const Navbar = (props) => {
 
           </AppBar>
         </ThemeProvider>
-        <Box component="nav">
-          <Drawer variant='temporary'
+        <Box >
+          <Drawer 
             open={mobileOpen}
             onClose={handleDrawerToggle}
             ModalProps={{
               keepmounted: true
             }} sx={{
               display: { xs: "block", sm: "none" },
-              "& .MuiDrawer-paper": {
-                boxSizing: "border-box",
-                width: 240,
-              }
+              
             }}>
             {drawer}
           </Drawer>
