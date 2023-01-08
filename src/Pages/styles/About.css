@@ -1,0 +1,15 @@
+.header-title{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    word-spacing: 1px;
+    margin:20px;
+    
+}
+
+@media screen {
+    
+}
