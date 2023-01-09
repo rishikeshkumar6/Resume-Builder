@@ -22,10 +22,9 @@ const Navbar = (props) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        <NavLink to="/">
-          
-          <img
-            src="https://www.almabetter.com/_next/image?url=https%3A%2F%2Falmablog-media.s3.ap-south-1.amazonaws.com%2Flogo1_edfc81b31b.png&w=256&q=75"
+        <NavLink to="/" >
+          <img  
+            src="http://resumewritingninja.com/wp-content/uploads/2021/08/High_Resolution-011-scaled-e1630103992865.jpg"
             height="30px"
             alt="Logo"
           />
@@ -72,9 +71,8 @@ const Navbar = (props) => {
                 position: "relative",
                 top: "5px",
               }}>
-                <NavLink to="/">
-                  
-                  <img
+                <NavLink to="/" className='navicon'>
+                  <img 
                     src="http://resumewritingninja.com/wp-content/uploads/2021/08/High_Resolution-011-scaled-e1630103992865.jpg"
                     height="30px"
                     alt="Logo" />

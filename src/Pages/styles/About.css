@@ -1,5 +1,9 @@
 .header-title{
-    text-align: center;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 35px;
+    margin-top: 20px;
+    font-family: Georgia, serif;
 }
 
 .container{
@@ -10,6 +14,45 @@
     
 }
 
-@media screen {
+.Typography{
+    text-align: justify;
+    font-family: 'Arial', Courier, monospace;
+}
+
+
+.icons{
+    padding: 10px;
+}
+
+
+.WhatsApp{
+    color:  green;
+}
+
+.Facebook{
+    color:  #3b5998;
+}
+
+.LinkedIn{
+    color:  #0A66C2;
     
+}
+
+.Instagram{
+    color:  #d62976;
+    
+}
+
+.Email{
+    color:  red;
+    
+}
+
+.Twitter{
+    color:  #00acee;
+    
+}
+
+.Reddit{
+    color: 	#ED001C;
 }
