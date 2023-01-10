@@ -23,6 +23,12 @@
     margin-right: 40px;
     font-family: Helvetica ;
   }
+
+  @media only screen and (max-width: 700px) {
+    .nav-link {
+      margin-right: 15px;
+    }
+  }
   
   .nav-link:hover {
     color: rgb(0, 98, 255);

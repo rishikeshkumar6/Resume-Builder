@@ -1,14 +1,12 @@
 import { WhatsApp, Facebook, LinkedIn, Instagram, Twitter, Reddit, Email } from '@mui/icons-material'
 import { Box, Stack, Typography } from '@mui/material'
 import React from 'react'
-import Navbar from '../Components/Navbar/Navbar'
 import "./styles/About.css"
 
 
 const AboutUs = () => {
   return (
     <div>
-      <Navbar />
       <Stack padding={
         { lg: '50px', md: '35px', sm: '25px', sx: '15px' }
       }>
