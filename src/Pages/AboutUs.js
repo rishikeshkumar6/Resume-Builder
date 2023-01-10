@@ -4,13 +4,13 @@ import React from 'react'
 import "./styles/About.css"
 
 
-const AboutUs = (props) => {
+const AboutUs = () => {
   return (
     <div>
       <Stack padding={
         { lg: '50px', md: '35px', sm: '25px', sx: '15px' }
       }>
-        <h2 className='header-title' style={{color:props.mode==='dark'?'white':'black'}}>
+        <h2 className='header-title'>
           Resume Builder
         </h2>
         <Stack className='container' direction={{
@@ -19,7 +19,7 @@ const AboutUs = (props) => {
           md: "column-reverse",
           lg: "row",
         }} >
-          <Typography className='Typography' style={{color:props.mode==='dark'?'white':'black'}} sx={{
+          <Typography className='Typography' sx={{
             fontSize: {
               xs: "15px",
               sm: "17px",
@@ -30,7 +30,7 @@ const AboutUs = (props) => {
               xs: "15px",
               sm: "20px",
               lg: "25px",
-            }   
+            },
           }}>
 
             Build beautiful, recruiter-tested resumes in a few clicks! Our resume builder is powerful and easy to use, with a range of amazing functions. Custom-tailor resumes for any job within minutes. Increase your interview chances and rise above the competition.
@@ -45,7 +45,7 @@ const AboutUs = (props) => {
           </Stack>
         </Stack>
         <Stack>
-          <Typography className='Share' style={{color:props.mode==='dark'?'white':'black'}} sx={{
+          <Typography className='Share' sx={{
             fontSize: {
               lg: "30px",
               md: "28px",

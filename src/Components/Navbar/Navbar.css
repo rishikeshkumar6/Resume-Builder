@@ -1,50 +1,40 @@
+.MuiPaper-root.MuiAppBar-root {
+  background-color: white;
+  box-shadow: 0px 0px 8px 4px rgb(228, 228, 228);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-  
-  .MuiPaper-root.MuiAppBar-root {
-    background-color: white;
-    box-shadow: 0px 0px 8px 4px grey;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  
-  
-  .nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  .nav-link {
-    font-size: 17px;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    margin-right: 40px;
-    font-family: Helvetica ;
-  }
 
-  @media only screen and (max-width: 700px) {
-    .nav-link {
-      margin-right: 15px;
-    }
-  }
-  
-  .nav-link:hover {
-    color: rgb(26, 255, 0);
-  }
-  
-  .drawerLinks a {
-    margin-top: 30px;
-  }
-  
-  .active {
-    color: rgb(0, 128, 255);
-  }
-  .MuiToolbar-root.MuiToolbar-regular {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-link {
+  font-size: 17px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 40px;
+  font-family: Helvetica ;
+}
+
+.nav-link:hover {
+  color: rgb(0, 98, 255);
+}
+
+.drawerLinks a {
+  margin-top: 30px;
+}
+
+.active {
+  color: rgb(0, 128, 255);
+}
+.MuiToolbar-root.MuiToolbar-regular {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
