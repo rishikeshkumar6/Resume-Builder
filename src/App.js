@@ -12,7 +12,7 @@ const App = () => {
   const toggleMode = ()=>{
     if(mode === 'light'){
       setMode('dark');
-      document.body.style.backgroundColor = '#121212';
+      document.body.style.backgroundColor = 'black';
       document.title = 'NR - Dark Mode';
     }
     else{

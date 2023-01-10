@@ -11,7 +11,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#fff"
+      main: "#fefefe"
     }
   }
 });
@@ -76,7 +76,7 @@ const Navbar = (props) => {
       <Typography variant="h6" sx={{ my: 2 }}>
         <NavLink to="/" >
           <img
-            src="http://resumewritingninja.com/wp-content/uploads/2021/08/High_Resolution-011-scaled-e1630103992865.jpg"
+            src="https://i.ibb.co/HzSjXR4/mainLogo.png" 
             height="30px"
             alt="Logo"
           />
@@ -91,13 +91,13 @@ const Navbar = (props) => {
           paddingLeft: "20px",
           flexDirection: "column",
         }}>
-        <NavLink className="nav-link" to="/" color="inherit">
+        <NavLink className="nav-link" to="/" style={{color:props.mode==='dark'?'white':'black'}}>
           Resume Templates
         </NavLink>
-        <NavLink to="/my/resumes" className="nav-link" color="inherit">
+        <NavLink to="/my/resumes" className="nav-link" style={{color:props.mode==='dark'?'white':'black'}}>
           My Resumes
         </NavLink>
-        <NavLink to="/about-us" color="inherit" className="nav-link">
+        <NavLink to="/about-us" className="nav-link" style={{color:props.mode==='dark'?'white':'black'}}>
           About us
         </NavLink>
       </List>
@@ -107,10 +107,10 @@ const Navbar = (props) => {
   return (
 
     <>
-      <Box sx={{ display: "flex" }}>
+      <Box  sx={{ display: "flex" }}>
         <ThemeProvider theme={theme}  >
           <AppBar className='Appbar' sx={{ boxShadow: "5" }} >
-            <Toolbar >
+            <Toolbar style={{backgroundColor: props.mode === 'dark'?'black':'white'}} >
               <IconButton color='inherit' id='icon' onClick={handleDrawerToggle}
                 sx={{ mr: 2, display: { sm: "none" } }} >
                 <MenuIcon />
@@ -125,19 +125,19 @@ const Navbar = (props) => {
               }}>
                 <NavLink to="/" className='navicon'>
                   <img
-                    src="http://resumewritingninja.com/wp-content/uploads/2021/08/High_Resolution-011-scaled-e1630103992865.jpg"
+                    src="https://i.ibb.co/HzSjXR4/mainLogo.png" 
                     height="30px"
                     alt="Logo" />
                 </NavLink>
               </Typography>
               <Box sx={{ display: { xs: "none", sm: 'block' }}}>
-                <NavLink to="/" className="nav-link" color="inherit">
+                <NavLink to="/" className="nav-link" style={{color:props.mode==='dark'?'white':'black'}}>
                   Resume Templates
                 </NavLink>
-                <NavLink to="/my/resumes" className="nav-link" color="inherit">
+                <NavLink to="/my/resumes" className="nav-link" style={{color:props.mode==='dark'?'white':'black'}}>
                   My Resumes
                 </NavLink>
-                <NavLink to="/about-us" className="nav-link aboutUs" color="inherit">
+                <NavLink to="/about-us" className="nav-link aboutUs" style={{color:props.mode==='dark'?'white':'black'}}>
                   About Us
                 </NavLink>
               </Box>
