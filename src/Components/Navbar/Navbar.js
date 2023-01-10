@@ -141,7 +141,7 @@ const Navbar = (props) => {
                   About Us
                 </NavLink>
               </Box>
-                <FormControlLabel 
+                <FormControlLabel onClick={props.toggleMode}
                   control={<MaterialUISwitch sx={{ m: 1}} defaultUnchecked />}
                 />
             </Toolbar>
