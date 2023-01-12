@@ -2,7 +2,7 @@
     text-align: left;
     padding-left: 15px;
     font-size: 35px;
-    margin-top: 20px;
+    margin-top: 15px;
     font-family: Georgia, serif;
 }
 
@@ -10,8 +10,7 @@
     display: flex;
     flex-direction: row;
     word-spacing: 1px;
-    margin:20px;
-    
+    margin: 20px;
 }
 
 .Typography{
