@@ -50,7 +50,7 @@ const Home = (props) => {
 
   return (
     <>
-      <div className="home">
+      
         <div className="Home-container">
           <h1 className="header-title">
             Templates
@@ -90,7 +90,7 @@ const Home = (props) => {
                 );
               })}
           </Stack>
-        </div>
+        
       </div>
     </>
   )

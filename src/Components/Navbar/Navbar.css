@@ -21,6 +21,11 @@
   margin-right: 40px;
   font-family: Helvetica ;
 }
+@media screen and (max-width: 750px) {
+  .nav-link {
+    margin-right: 10px;
+  }
+}
 
 .nav-link:hover {
   color: rgb(0, 98, 255);
