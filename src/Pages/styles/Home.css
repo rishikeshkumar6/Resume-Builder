@@ -1,0 +1,50 @@
+.home {
+    width: 100%;
+}
+.Home-container {
+    width: 100%;
+    padding: 30px 70px;
+}
+.header-title{
+    text-align: left;
+    font-size: 35px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-family: Georgia, serif;
+}
+
+.paragraph{
+    font-size: 20px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.img-container{
+    width: 100%;
+    position: relative;
+}
+
+.img-container:hover .black-screen{
+    cursor: pointer;
+    visibility: visible;
+}
+
+.template-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-container:hover .MuiButtonBase-root.MuiButton-root {
+      visibility: visible;
+    }
+
+  .MuiButtonBase-root.MuiButton-root.use-template-btn {
+    position: absolute;
+    top: 45%;
+    right: 35%;
+    z-index: 5;
+    visibility: hidden;
+    text-transform: capitalize;
+}
+
