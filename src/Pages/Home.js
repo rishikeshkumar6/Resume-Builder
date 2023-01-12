@@ -1,10 +1,10 @@
 import React from 'react'
+import './styles/Home.css'
 
-
-const Home = (props) => {
+const Home = () => {
   return (
     <>
-
+      
     </>
   )
 }

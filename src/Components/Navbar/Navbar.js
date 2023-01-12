@@ -3,6 +3,8 @@ import "./Navbar.css";
 import { AppBar, Box, createTheme, Divider, Drawer, IconButton, List, ThemeProvider, Toolbar, Typography } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import { NavLink } from 'react-router-dom';
+import Logo from '../Assets/mainLogo.png'
+
 
 const theme = createTheme({
   palette: {
@@ -14,7 +16,7 @@ const theme = createTheme({
 
 
 const Navbar = (props) => {
-  const [mobileOpen, setMobileOpen] = useState (false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -23,8 +25,8 @@ const Navbar = (props) => {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         <NavLink to="/" >
-          <img  
-            src="http://resumewritingninja.com/wp-content/uploads/2021/08/High_Resolution-011-scaled-e1630103992865.jpg"
+          <img
+            src={Logo}
             height="30px"
             alt="Logo"
           />
@@ -55,16 +57,16 @@ const Navbar = (props) => {
   return (
 
     <>
-      <Box sx={{ display: "flex"  }}>
+      <Box sx={{ display: "flex" }}>
         <ThemeProvider theme={theme}  >
-          <AppBar  className='Appbar' sx={{ boxShadow: "5" }} >
+          <AppBar className='Appbar' sx={{ boxShadow: "5" }} >
             <Toolbar >
               <IconButton color='inherit' id='icon' onClick={handleDrawerToggle}
                 sx={{ mr: 2, display: { sm: "none" } }} >
                 <MenuIcon />
               </IconButton>
 
-              <Typography variant='h6' sx={{ 
+              <Typography variant='h6' sx={{
                 flexGrow: 1,
                 display: { sm: "block" },
                 fontSize: "25px",
@@ -72,8 +74,8 @@ const Navbar = (props) => {
                 top: "5px",
               }}>
                 <NavLink to="/" className='navicon'>
-                  <img 
-                    src="http://resumewritingninja.com/wp-content/uploads/2021/08/High_Resolution-011-scaled-e1630103992865.jpg"
+                  <img
+                    src={Logo}
                     height="30px"
                     alt="Logo" />
                 </NavLink>
@@ -95,14 +97,14 @@ const Navbar = (props) => {
           </AppBar>
         </ThemeProvider>
         <Box >
-          <Drawer 
+          <Drawer
             open={mobileOpen}
             onClose={handleDrawerToggle}
             ModalProps={{
               keepmounted: true
             }} sx={{
               display: { xs: "block", sm: "none" },
-              
+
             }}>
             {drawer}
           </Drawer>
