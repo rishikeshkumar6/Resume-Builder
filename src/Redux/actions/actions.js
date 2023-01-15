@@ -46,11 +46,31 @@ export const addEducation = (details) => ({
 });
 
 export const addProjects = (details) => ({
-  type: actionTypes.ADDPROJECTS,
+  type: actionTypes.ADDNEWPROJECTS,
   payload: details,
 });
 
 export const addAchievements = (details) => ({
-  type: actionTypes.ADDACHIEVEMENTS,
+  type: actionTypes.ADDNEWACHIEVEMENTS,
   payload: details,
+});
+
+export const editProject = (projects) => ({
+  type: actionTypes.EDITPROJECT,
+  payload: projects,
+});
+
+export const deleteProject = (id) => ({
+  type: actionTypes.DELETEPROJECT,
+  payload: id,
+});
+
+export const editAchievements = (achivements) => ({
+  type: actionTypes.EDITACHIEVEMENT,
+  payload: achivements,
+});
+
+export const deleteAchievements = (id) => ({
+  type: actionTypes.DELETEACHIEVEMENT,
+  payload: id,
 });
