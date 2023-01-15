@@ -12,7 +12,7 @@ import Template3 from "../Templates/Template3";
 import Template4 from "../Templates/Template4";
 import BlackScreen from '../Components/BlackScreen/BlackScreen';
 
- const templates = [
+const templates = [
   {
     id: 1,
     template_name: "Template 1",
@@ -50,47 +50,46 @@ const Home = (props) => {
 
   return (
     <>
-      
-        <div className="Home-container">
-          <h1 className="header-title">
-            Templates
-          </h1>
-          <p className='paragraph'>
-            Select a Template
-          </p>
-          <Stack
+      <div className="Home-container">
+        <h1 className="header-title">
+          Templates
+        </h1>
+        <p className='paragraph'>
+          Select a Template
+        </p>
+        <Stack
           sx={{
-                width: "100%",
-                display: "grid",
-                gridTemplateColumns: {
-                  sm: "1fr 1fr",
-                  md: "1fr 1fr",
-                  lg: "1fr 1fr 1fr",
-                  xl: "1fr 1fr 1fr 1fr",
-                },
-                gap: "30px",
-              }}>
-              {templates.map((template) => {
-                return (
-                  <div key={template.id} id="template" className="img-container">
-                    <img
-                      className="template-img"
-                      src={template.template_img}
-                      alt={template.template_name}
-                    />
-                    <BlackScreen></BlackScreen>
-                    <Button
-                      className="use-template-btn"
-                      onClick={() => navigateToDetailFilling(template.id)}
-                      size="medium"
-                      variant="contained">
-                      Use Template
-                    </Button>
-                  </div>
-                );
-              })}
-          </Stack>
-        
+            width: "100%",
+            display: "grid",
+            gridTemplateColumns: {
+              sm: "1fr 1fr",
+              md: "1fr 1fr",
+              lg: "1fr 1fr 1fr",
+              xl: "1fr 1fr 1fr 1fr",
+            },
+            gap: "30px",
+          }}>
+          {templates.map((template) => {
+            return (
+              <div key={template.id} id="template" className="img-container">
+                <img
+                  className="template-img"
+                  src={template.template_img}
+                  alt={template.template_name}
+                />
+                <BlackScreen></BlackScreen>
+                <Button
+                  className="use-template-btn"
+                  onClick={() => navigateToDetailFilling(template.id)}
+                  size="medium"
+                  variant="contained">
+                  Use Template
+                </Button>
+              </div>
+            );
+          })}
+        </Stack>
+
       </div>
     </>
   )
