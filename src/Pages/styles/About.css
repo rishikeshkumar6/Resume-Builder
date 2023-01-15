@@ -1,23 +1,8 @@
 .header-title{
     text-align: left;
-    padding-left: 15px;
     font-size: 35px;
-    margin-top: 15px;
     font-family: Georgia, serif;
 }
-
-.container{
-    display: flex;
-    flex-direction: row;
-    word-spacing: 1px;
-    margin: 20px;
-}
-
-.Typography{
-    text-align: justify;
-    font-family: 'Arial', Courier, monospace;
-}
-
 
 .icons{
     padding: 10px;
