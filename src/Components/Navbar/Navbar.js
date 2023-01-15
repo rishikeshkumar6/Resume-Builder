@@ -27,7 +27,7 @@ const Navbar = (props) => {
         <NavLink to="/" >
           <img
             src={Logo}
-            height="30px"
+            height="42px"
             alt="Logo"
           />
         </NavLink>
