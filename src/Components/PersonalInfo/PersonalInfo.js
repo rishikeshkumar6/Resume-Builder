@@ -4,7 +4,7 @@ import './PersonalInfo.css'
 
 const PersonalInfo = () => {
   return (
-    <Paper className='Paper' elevation={2} >
+    <Paper className='Paper' elevation={4} >
     <Avatar
         sx={{ width: 130, height: 130, margin: '20px 0px 0px 20px' }}
         alt="profile img"
