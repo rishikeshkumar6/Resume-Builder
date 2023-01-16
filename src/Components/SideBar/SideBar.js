@@ -17,7 +17,7 @@ import {
   WorkHistorySharp,
 } from "@mui/icons-material";
 
-const SideBar = () => {
+const SideBar = (props) => {
   return (
     <>
       <Box
@@ -25,18 +25,24 @@ const SideBar = () => {
         sx={{
           width: "100%",
           maxWidth: 360,
-          boxShadow: "0px 0px 4px 0px rgb(228, 228, 228)",
+          boxShadow: "0px 0px 4px 0px gray",
           height: "fit-content",
         }}
       >
         <List disablePadding>
           <ListItem disablePadding>
-            <ListItemButton sx={{ borderLeft: "3px solid rgb(0, 128, 255)" }}>
-              <AccountCircleSharp />
+            <ListItemButton sx={
+              props.click === 0
+                ? { color: "#1565c0" ,borderLeft: "3px solid #42a5f5" }
+                : null}>
+              <AccountCircleSharp color={props.click === 0 ? "#1976d2" : "disabled"} />
               <ListItemText
                 className="Icons"
                 primary="Personal Info"
-                sx={{ color: "#1976d2", paddingLeft: "8px" }}
+                sx={
+                  props.click === 0
+                    ? { color: "gray", paddingLeft: "16px" }
+                    : {paddingLeft:"10px"}}
               />
             </ListItemButton>
           </ListItem>
@@ -44,12 +50,18 @@ const SideBar = () => {
           <Divider />
 
           <ListItem disablePadding>
-            <ListItemButton sx={{ borderLeft: "3px solid rgb(0, 128, 255)" }}>
-              <WorkHistorySharp />
+            <ListItemButton sx={
+              props.click === 1
+                ? { color: "#1565c0" ,borderLeft: "3px solid #42a5f5" }
+                : null}>
+              <WorkHistorySharp color={props.click === 1 ? "#1976d2" : "disabled"}/>
               <ListItemText
                 className="Icons"
                 primary="Work Experience"
-                sx={{ color: "#1976d2", paddingLeft: "8px" }}
+                sx={
+                  props.click === 1
+                    ? { color: "gray", paddingLeft: "16px" }
+                    : {paddingLeft:"10px"}}
               />
             </ListItemButton>
           </ListItem>
@@ -57,12 +69,18 @@ const SideBar = () => {
           <Divider />
 
           <ListItem disablePadding>
-            <ListItemButton sx={{ borderLeft: "3px solid rgb(0, 128, 255)" }}>
-              <SchoolSharp />
+            <ListItemButton sx={
+              props.click === 2
+                ? { color: "#1565c0" ,borderLeft: "3px solid #42a5f5" }
+                : null}>
+              <SchoolSharp color={props.click === 2 ? "#1976d2" : "disabled"}/>
               <ListItemText
                 className="Icons"
                 primary="Education"
-                sx={{ color: "#1976d2", paddingLeft: "8px" }}
+                sx={
+                  props.click === 2
+                    ? { color: "gray", paddingLeft: "16px" }
+                    : {paddingLeft:"10px"}}
               />
             </ListItemButton>
           </ListItem>
@@ -70,12 +88,18 @@ const SideBar = () => {
           <Divider />
 
           <ListItem disablePadding>
-            <ListItemButton sx={{ borderLeft: "3px solid rgb(0, 128, 255)" }}>
-              <StarSharp />
+            <ListItemButton sx={
+              props.click === 3
+                ? { color: "#1565c0" ,borderLeft: "3px solid #42a5f5" }
+                : null}>
+              <StarSharp color={props.click === 3 ? "#1976d2" : "disabled"}/>
               <ListItemText
                 className="Icons"
                 primary="Key Skills"
-                sx={{ color: "#1976d2", paddingLeft: "8px" }}
+                sx={
+                  props.click === 3
+                    ? { color: "gray", paddingLeft: "16px" }
+                    : {paddingLeft:"10px"}}
               />
             </ListItemButton>
           </ListItem>
@@ -83,12 +107,18 @@ const SideBar = () => {
           <Divider />
 
           <ListItem disablePadding>
-            <ListItemButton sx={{ borderLeft: "3px solid rgb(0, 128, 255)" }}>
-              <EmojiEventsSharp />
+            <ListItemButton sx={
+              props.click === 4
+                ? { color: "#1565c0" ,borderLeft: "3px solid #42a5f5" }
+                : null}>
+              <EmojiEventsSharp color={props.click === 4 ? "#1976d2" : "disabled"}/>
               <ListItemText
                 className="Icons"
                 primary="Achievements"
-                sx={{ color: "#1976d2", paddingLeft: "8px" }}
+                sx={
+                  props.click === 4
+                    ? { color: "gray", paddingLeft: "16px" }
+                    : {paddingLeft:"10px"}}
               />
             </ListItemButton>
           </ListItem>
@@ -96,12 +126,18 @@ const SideBar = () => {
           <Divider />
 
           <ListItem disablePadding>
-            <ListItemButton sx={{ borderLeft: "3px solid rgb(0, 128, 255)" }}>
-              <AccountTreeSharp />
+            <ListItemButton sx={
+              props.click === 5
+                ? { color: "#1565c0" ,borderLeft: "3px solid #42a5f5" }
+                : null}>
+              <AccountTreeSharp color={props.click === 5 ? "#1976d2" : "disabled"}/>
               <ListItemText
                 className="Icons"
                 primary="Projects"
-                sx={{ color: "#1976d2", paddingLeft: "8px" }}
+                sx={
+                  props.click === 5
+                    ? { color: "gray", paddingLeft: "16px" }
+                    : {paddingLeft:"10px"}}
               />
             </ListItemButton>
           </ListItem>
