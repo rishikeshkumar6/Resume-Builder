@@ -44,19 +44,7 @@ const AboutUs = () => {
               textAlign: "justify",
             }}
           >
-            Build beautiful, recruiter-tested resumes in a few clicks! Our
-            resume builder is powerful and easy to use, with a range of amazing
-            functions. Custom-tailor resumes for any job within minutes.
-            Increase your interview chances and rise above the competition. A
-            resume builder is an online tool that you can use to quickly create
-            a resume. Resume builders allow you to pick a pre-formatted resume
-            template, fill in your contact and background information, and
-            select pre-written work history bullet points — saving you a lot of
-            time. We have developed a resume builder based on feedback from
-            thousands of users, recruiter expertise, stellar template design and
-            the best hiring practices. The goal is simple: help you land that
-            dream job interview! Get an advantage in the modern professional
-            environment.
+            Our resume builder website is designed to help job seekers create professional and effective resumes in minutes. With our user-friendly interface, you can easily input your information and choose from a variety of customizable templates to create a resume that highlights your skills and experiences. Our platform also includes a variety of tools to help you optimize your resume for Applicant Tracking Systems, which are used by many companies to automatically screen resumes. Additionally, you can also get feedback and suggestions on your resume to make it stand out. Our website also provides a feature for creating cover letters that match the style of your resume. With our resume builder, you can be confident that your resume will make a great first impression and help you stand out from the competition. Sign up now and take the first step in landing your dream job!
           </Typography>
           <Stack className="img">
             <img
