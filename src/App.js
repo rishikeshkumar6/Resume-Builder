@@ -8,12 +8,19 @@ import DetailFiling from './Pages/DetailFiling';
 
 const App = () => {
   return (
+    // Wrapping the entire App with Router component
     <Router>
+      {/* Navbar component for navigation */}
       <Navbar />
+      {/* Defining different routes using Routes component */}
       <Routes>
+        {/* Home route */}
         <Route exact path="/" element={<Home />} />  
+        {/* Detail filing route */}
         <Route exact path="/template/fill-details" element={<DetailFiling />}/>
+        {/* My Resumes route */}
         <Route exact path="/my/resumes" element={<MyResume />} />
+        {/* About Us route */}
         <Route exact path="/about-us" element={<AboutUs />} />
       </Routes>
     </Router>
