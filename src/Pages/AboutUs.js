@@ -35,10 +35,10 @@ const AboutUs = () => {
             className="Typography"
             sx={{
               fontSize: {
-                xs: "13px",
+                xs: "14px",
                 sm: "15px",
-                md: "17px",
-                lg: "19px",
+                md: "16px",
+                lg: "17px",
               },
               paddingRight: {
                 xs: "15px",
