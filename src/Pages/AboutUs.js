@@ -14,8 +14,11 @@ import "./styles/About.css";
 const AboutUs = () => {
   return (
     <div>
+      {/* Creates a stack with padding for different screen sizes */}
       <Stack p={{ xs: "15px", sm: "25px", md: "30px", lg: "33px " }}>
+        {/* Header title */}
         <h2 className="header-title">Resume Builder</h2>
+        {/* Creates a stack to hold the text and image, sets direction and spacing for different screen sizes */}
         <Stack
           className="midContainer"
           direction={{
@@ -27,6 +30,7 @@ const AboutUs = () => {
           spacing={{ xs: 1, sm: 2, md: 4 }}
           mt="20px"
         >
+          {/* Text describing the website's features and benefits */}
           <Typography
             className="Typography"
             sx={{
@@ -44,15 +48,20 @@ const AboutUs = () => {
               textAlign: "justify",
             }}
           >
-            Our resume builder website is designed to help job seekers create professional and effective resumes in minutes. With our user-friendly interface, you can easily input your information and choose from a variety of customizable templates to create a resume that highlights your skills and experiences. Our platform also includes a variety of tools to help you optimize your resume for Applicant Tracking Systems, which are used by many companies to automatically screen resumes. Additionally, you can also get feedback and suggestions on your resume to make it stand out. Our website also provides a feature for creating cover letters that match the style of your resume. With our resume builder, you can be confident that your resume will make a great first impression and help you stand out from the competition. Sign up now and take the first step in landing your dream job!
+            Our resume builder website allows users to create professional and polished resumes quickly and easily. One of the key features of the website is the ability to select from a wide range of customizable templates. These templates are designed by professional designers to ensure that your resume looks and feels modern and attractive. The templates are also fully editable, so you can customize them to match your personal style and the requirements of the job you're applying for. 
+            The website is hosted on GitHub Pages as a project, which means it is easily accessible and can be edited by anyone who wants to contribute to the project. This also makes it easy to update the website and templates with the latest designs and features.
+            Overall, our resume builder website is a powerful tool for job seekers looking to create a professional and impressive resume that can help them land the job they want. With its wide range of customizable templates, easy-to-use interface,
+            the website makes it simple for anyone to create a great-looking resume that stands out from the crowd.
           </Typography>
           <Stack className="img">
+             {/* Image container */}
             <img
               src="https://media.istockphoto.com/id/849410148/vector/human-resources-management-concept.jpg?s=612x612&w=0&k=20&c=YCuOlwFaN2jwhCUmu3px_4AdPctg_EH8ud-9iGYwr2M="
-              alt="resume-bulider-img"
+              alt="resume-builder-img"
             />
           </Stack>
         </Stack>
+                {/* Share text */}
         <Stack>
           <Typography
             className="Share"
@@ -70,6 +79,7 @@ const AboutUs = () => {
             Please share your with friends
           </Typography>
         </Stack>
+                {/* Social media icons */}
         <Box className="icons">
           <a
             href="https://web.whatsapp.com/"
