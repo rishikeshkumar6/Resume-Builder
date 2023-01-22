@@ -33,7 +33,7 @@ const SideBar = (props) => {
           <ListItem disablePadding>
             <ListItemButton sx={
               props.click === 0
-                ? { color: "#1565c0" ,borderLeft: "3px solid #42a5f5" }
+                ? { color: "#1976d2" ,borderLeft: "3px solid #42a5f5" }
                 : null}>
               <AccountCircleSharp color={props.click === 0 ? "#1976d2" : "disabled"} />
               <ListItemText
@@ -41,7 +41,7 @@ const SideBar = (props) => {
                 primary="Personal Info"
                 sx={
                   props.click === 0
-                    ? { color: "gray", paddingLeft: "16px" }
+                    ? { color: "#1976d2", paddingLeft: "16px" }
                     : {paddingLeft:"10px"}}
               />
             </ListItemButton>
@@ -60,7 +60,7 @@ const SideBar = (props) => {
                 primary="Work Experience"
                 sx={
                   props.click === 1
-                    ? { color: "gray", paddingLeft: "16px" }
+                    ? { color: "#1976d2", paddingLeft: "16px" }
                     : {paddingLeft:"10px"}}
               />
             </ListItemButton>
@@ -79,7 +79,7 @@ const SideBar = (props) => {
                 primary="Education"
                 sx={
                   props.click === 2
-                    ? { color: "gray", paddingLeft: "16px" }
+                    ? { color: "#1976d2", paddingLeft: "16px" }
                     : {paddingLeft:"10px"}}
               />
             </ListItemButton>
@@ -98,7 +98,7 @@ const SideBar = (props) => {
                 primary="Key Skills"
                 sx={
                   props.click === 3
-                    ? { color: "gray", paddingLeft: "16px" }
+                    ? { color: "#1976d2", paddingLeft: "16px" }
                     : {paddingLeft:"10px"}}
               />
             </ListItemButton>
@@ -117,7 +117,7 @@ const SideBar = (props) => {
                 primary="Achievements"
                 sx={
                   props.click === 4
-                    ? { color: "gray", paddingLeft: "16px" }
+                    ? { color: "#1976d2", paddingLeft: "16px" }
                     : {paddingLeft:"10px"}}
               />
             </ListItemButton>
@@ -136,7 +136,7 @@ const SideBar = (props) => {
                 primary="Projects"
                 sx={
                   props.click === 5
-                    ? { color: "gray", paddingLeft: "16px" }
+                    ? { color: "#1976d2", paddingLeft: "16px" }
                     : {paddingLeft:"10px"}}
               />
             </ListItemButton>
