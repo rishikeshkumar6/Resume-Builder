@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 import Logo from '../Assets/mainLogo.png'
 
 
+// Define a custom theme for the navbar with a white primary color
 const theme = createTheme({
   palette: {
     primary: {
@@ -14,13 +15,17 @@ const theme = createTheme({
   }
 });
 
-
+// Navbar component 
 const Navbar = (props) => {
+  // state to keep track of whether the mobile navigation drawer is open or closed
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // function to toggle the mobile navigation drawer
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  // content for the mobile navigation drawer
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
