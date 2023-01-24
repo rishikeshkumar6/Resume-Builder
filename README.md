@@ -10,3 +10,5 @@ srijani Das
 Gopal Dubey
 Rohan Bhairi
 
+### roadmap
+React app -> Navbar -> About us -> Home -> detailfilling page -> redux -> components banaye -> side bar -> personal info (back next btn, input)-> work exp -> education -> skill -> achievement -> project -> templates & preview - > my resume -> deployment -> video -> deployment link, video link, github link and Google template doc link -> submit
