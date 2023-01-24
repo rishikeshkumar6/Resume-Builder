@@ -6,7 +6,7 @@ and provide you quality resumes with one of the best resume tamplate available
 #### Team Members
 
 Yash Dahekar
-srijani Das
+Srijani Das
 Gopal Dubey
 Rohan Bhairi
 
