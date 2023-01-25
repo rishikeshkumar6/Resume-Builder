@@ -6,20 +6,16 @@
 }
 .inputs{
     display: grid;
+    gap: 30px;
+}
+
+.grido{
+    display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,1fr);
     gap: 30px;
-    
 }
 
-
-.Address{
-    grid-column: 1 / span 2;
-}
-
-.Objective{
-    grid-column: 1 / span 2;
-}
 
 .NextButton{
     width: 120px;

@@ -1,8 +1,13 @@
-import { Avatar, Button, Paper, TextField } from '@mui/material'
+import { Avatar, Button, Paper} from '@mui/material'
 import React from 'react'
 import './PersonalInfo.css'
+import Input from '../Input/Input'
 
-const PersonalInfo = () => {
+
+
+
+
+const PersonalInfo = (props) => {
   return (
     <Paper className='Paper' elevation={4} >
     <Avatar
@@ -15,15 +20,75 @@ const PersonalInfo = () => {
       </div>
       <hr />
       <form className='inputs' action="">
-      <TextField className="FirstName" label="First Name" variant="outlined" />
-      <TextField className="LastName" label="Last Name" variant="outlined" />
-      <TextField className="Email" label="Email" variant="outlined" />
-      <TextField className="Mobile" label="Mobile" variant="outlined" />
-      <TextField className="Address" label="Address" variant="outlined" />
-      <TextField className="City" label="City" variant="outlined" />
-      <TextField className="State" label="State" variant="outlined" />
-      <TextField className="PinCode" label="Pin Code" variant="outlined" />
-      <TextField className="Objective" label="Objective" variant="outlined" />
+      <div className='grido'>
+      <Input 
+      className="FirstName" 
+      label={"First Name"}
+      type={"text"}
+      value={''}
+   
+      />
+      <Input 
+      className="LastName"
+      label={"Last Name"}
+      type={"text"}
+      value={''}
+
+      />
+      <Input 
+      className="Email"
+      label={"Email"}
+      type={"email"}
+      value={''}
+
+      />
+      <Input 
+      className="Mobile"
+      label={"Mobile Number"}
+      type={"number"}
+      value={''}
+
+
+      />
+      </div>
+      <Input 
+      className="Address"
+      label={"Address"}
+      type={"text"}
+      value={''}
+
+
+      />
+      <div className='grido'>
+      <Input 
+      className="City"
+      label={"City"}
+      type={"text"}
+      value={''}
+
+      />
+      <Input 
+      className="State"
+      label={"State"}
+      type={"text"}
+      value={''}
+
+      />
+      <Input 
+      className="PinCode"
+      label={"Pin Code"}
+      type={"number"}
+      value={''}
+
+      />
+      </div>
+      <Input 
+      className="Objective"
+      label={"Objective"}
+      type={"text"}
+      value={''}
+
+      />
       </form>
       <hr />
       <div align="right" >
@@ -33,4 +98,4 @@ const PersonalInfo = () => {
   )
 }
 
-export default PersonalInfo
+export default PersonalInfo;

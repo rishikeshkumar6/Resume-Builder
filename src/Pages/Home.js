@@ -14,6 +14,7 @@ import BlackScreen from "../Components/BlackScreen/BlackScreen";
 import { selectTemplate } from "../Redux/actions/actions";
 import { connect } from 'react-redux';
 
+// This section creates an array of template objects, each of which contains an id, template name, image and the template component.
 
 const templates = [
   {
@@ -42,6 +43,8 @@ const templates = [
   },
 ];
 
+// This section maps the state and dispatch to props so that the component can access the selected template id and set the selected template id.
+
 const mapStateToProps = (state) => ({
   selectedTemplateId: state.selectedTemplateReducer.selectedTemplateId,
 });
@@ -51,6 +54,9 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const Home = (props) => {
+
+  // This section defines the main Home component and uses the useNavigate hook to navigate to a different page, and a function to navigate to the details filling page and set the selected template id.
+
   const navigate = useNavigate();
 
   const navigateToDetailFilling = (id) => {
@@ -60,6 +66,7 @@ const Home = (props) => {
 
   return (
     <>
+    {/* This section returns the JSX that renders the template images and a button to navigate to the details filling page. It uses a Stack component from the material-ui library to create a grid of templates and maps over the templates array to render each template's image and button. */}
       <div className="Home-container">
         <h1 className="header-title">Templates</h1>
         <p className="paragraph">Select a Template</p>
@@ -101,5 +108,5 @@ const Home = (props) => {
     </>
   );
 };
-
+//exports the component and connects the component to the redux store.
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
