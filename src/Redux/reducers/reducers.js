@@ -20,7 +20,7 @@ const initialPersonalInfoState = {
     address: "",
     city: "",
     state: "",
-    postalCode: "",
+    pinCode: "",
     objective: "",
   },
 };
