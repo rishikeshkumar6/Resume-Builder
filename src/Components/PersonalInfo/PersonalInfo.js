@@ -1,9 +1,10 @@
-import { Avatar, Button, Paper } from '@mui/material'
+import { Avatar, Button, Divider, Paper } from '@mui/material'
 import React from 'react'
 import './PersonalInfo.css'
 import Input from '../Input/Input'
 import { connect } from "react-redux";
 import { addPersonalInfo } from "../../Redux/actions/actions";
+import NextnBackBTN from '../NextnBackBTN/NextnBackBTN.js';
 
 const mapStateToProps = (state) => ({
   personalInfo: state.personalInfoReducer.personalInfo,
@@ -28,7 +29,7 @@ const PersonalInfo = (props) => {
       <div className='change-profile'>
         <Button variant="outlined">Set Profile Picture</Button>
       </div>
-      <hr />
+      <Divider />
       <form className='inputs' onSubmit={handleBackNext}>
         <div className='grido'>
           <Input
@@ -137,13 +138,12 @@ const PersonalInfo = (props) => {
             })}
         />
       </form>
-      <hr />
-      <div align="right" >
-        <Button
-          className='NextButton'
-          variant="contained"
-          onClick={props.click}
-        >Next</Button>
+      <Divider />
+      <div align="right">
+        <NextnBackBTN 
+        btn={'Next'}
+        variant={'contained'}
+        />
       </div>
     </Paper>
   )

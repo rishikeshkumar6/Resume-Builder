@@ -15,8 +15,3 @@
     grid-template-rows: repeat(2,1fr);
     gap: 30px;
 }
-
-
-.NextButton{
-    width: 120px;
-}
