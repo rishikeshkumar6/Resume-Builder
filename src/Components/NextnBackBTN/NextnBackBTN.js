@@ -1,15 +1,28 @@
 import React from 'react'
 import './NextnBackBTN.css'
-import { Button } from '@mui/material'
+import { Button, CircularProgress } from '@mui/material'
+
 
 const NextnBackBTN = (props) => {
   return (
-    <div className='container'>
-        <Button 
-            className='btn'
-            mr="20px"
-            variant={props.variant}
-        >{props.btn}</Button>      
+    <div className='containerbtn'>
+      {props.click === 0 ? <div /> : (
+        <Button
+          onClick={props.goBack}
+          className='btn'
+          variant="outlined"
+        >Back</Button>
+      )}
+      {props.loading ? (
+        <CircularProgress size={30} />
+      ) : (
+        <Button
+          className='btn'
+          variant='contained'
+          type='submit'>
+          Next
+        </Button>
+      )}
     </div>
   )
 }
