@@ -11,7 +11,7 @@ const NextnBackBTN = (props) => {
           onClick={props.goBack}
           className='btn'
           variant="outlined"
-        >Back</Button>
+        >{props.backbtn}</Button>
       )}
       {props.loading ? (
         <CircularProgress size={30} />
@@ -20,7 +20,7 @@ const NextnBackBTN = (props) => {
           className='btn'
           variant='contained'
           type='submit'>
-          Next
+          {props.nextbtn}
         </Button>
       )}
     </div>

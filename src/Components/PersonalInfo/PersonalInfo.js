@@ -300,6 +300,7 @@ const PersonalInfo = (props) => {
         <NextnBackBTN
           loading={loading}
           click={props.click}
+          nextbtn={"Next"}
         />
       </form>
       <Snackbar
