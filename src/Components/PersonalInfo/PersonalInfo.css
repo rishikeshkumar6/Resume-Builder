@@ -15,3 +15,12 @@
     grid-template-rows: repeat(2,1fr);
     gap: 30px;
 }
+
+.gridoTwo{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+}
+
+.deleteicon{
+    height: 60px !important
+}
