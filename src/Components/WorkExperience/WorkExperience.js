@@ -126,6 +126,7 @@ const WorkExperience = (props) => {
                   label={"Job Title"}
                   type={"text"}
                   register={register}
+                  name={"jobTitle" + experience.id}
                   value={experience.jobTitle}
                   setValue={(value) =>
                     editJobTitleExperience(value, experience.id)
@@ -140,6 +141,7 @@ const WorkExperience = (props) => {
                 <Input
                   label={"Organisation Name"}
                   type={"text"}
+                  name={"organizationName" + experience.id}
                   value={experience.organizationName}
                   setValue={(value) =>
                     editOrganisationNameExperience(value, experience.id)
@@ -238,11 +240,8 @@ const WorkExperience = (props) => {
             
           </div>
         )}
-         
-
         <Divider sx={{ margin: "15px 0" }} />
         <NextnBackBTN
-
           onNext={handleNext}
           goBack={handleBack}
           loading={loading}

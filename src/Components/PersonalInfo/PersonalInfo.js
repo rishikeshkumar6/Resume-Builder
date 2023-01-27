@@ -171,6 +171,7 @@ const PersonalInfo = (props) => {
             className="FirstName"
             label={"First Name"}
             type={"text"}
+            name={"firstName"}
             register={register}
             value={props.personalInfo.firstName}
             setValue={(value) =>
@@ -184,6 +185,7 @@ const PersonalInfo = (props) => {
           <Input
             className="LastName"
             label={"Last Name"}
+            name={"lastName"}
             type={"text"}
             register={register}
             value={props.personalInfo.lastName}
@@ -199,6 +201,7 @@ const PersonalInfo = (props) => {
             className="Email"
             label={"Email"}
             type={"email"}
+            name={"email"}
             register={register}
             value={props.personalInfo.email}
             setValue={(value) =>
@@ -213,6 +216,7 @@ const PersonalInfo = (props) => {
             className="Mobile"
             label={"Mobile Number"}
             type={"number"}
+            name={"mobile"}
             register={register}
             value={props.personalInfo.mobile}
             setValue={(value) =>
@@ -228,6 +232,7 @@ const PersonalInfo = (props) => {
           className="Address"
           label={"Address"}
           type={"text"}
+          name={"address"}
           register={register}
           value={props.personalInfo.address}
           setValue={(value) =>
@@ -243,6 +248,7 @@ const PersonalInfo = (props) => {
             className="City"
             label={"City"}
             type={"text"}
+            name={"city"}
             register={register}
             value={props.personalInfo.city}
             setValue={(value) =>
@@ -257,6 +263,7 @@ const PersonalInfo = (props) => {
             className="State"
             label={"State"}
             type={"text"}
+            name={"state"}
             register={register}
             value={props.personalInfo.state}
             setValue={(value) =>
@@ -271,6 +278,7 @@ const PersonalInfo = (props) => {
             className="PinCode"
             label={"Pin Code"}
             type={"number"}
+            name={"pinCode"}
             register={register}
             value={props.personalInfo.pinCode}
             setValue={(value) =>
@@ -286,6 +294,7 @@ const PersonalInfo = (props) => {
           className="Objective"
           label={"Objective"}
           type={"text"}
+          name={"objective"}
           register={register}
           value={props.personalInfo.objective}
           setValue={(value) =>

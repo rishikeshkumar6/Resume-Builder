@@ -12,6 +12,7 @@ const Input = (props) => {
         variant='outlined'
         label={props.label}
         type={props.type}
+        name={props.name} 
         value={props.value}
         onChange={(event) => props.setValue(event.target.value.toString())}
         error={props.error}
