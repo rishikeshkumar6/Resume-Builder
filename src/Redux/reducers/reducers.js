@@ -53,18 +53,18 @@ const initialEducationState = {
 
 // Initial state for the skills section
 const initialSkillsState = {
-  skills: ["", "", ""],
+  skills: ["", "", "",""],
 };
 
 // Initial state for the projects section
 const initialProjectsState = {
-  projects: ["", "", ""],
+  projects: ["", "", "",""],
 };
 
 // Initial state for the achievements section
 const initialAchievementsState = {
   // Array of the user's achievements
-  achievements: ["", "", ""],
+  achievements: ["", "", "",""],
 };
 
 

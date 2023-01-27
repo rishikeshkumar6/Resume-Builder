@@ -27,7 +27,7 @@ const SideBar = (props) => {
         sx={{
           width: "100%",
           maxWidth: 360,
-          boxShadow: "0px 0px 4px 0px gray",
+         // boxShadow: "0px 0px 4px 0px gray",//
           height: "fit-content",
         }}
       >
