@@ -133,7 +133,7 @@ const PersonalInfo = (props) => {
       <Avatar
         sx={{ width: 130, height: 130, margin: '20px 0px 0px 20px' }}
         alt="profile img"
-        src={img.length ? img : "https://cdn-icons-png.flaticon.com/512/1160/1160865.png"}
+        src={img.length ? img : "https://img.icons8.com/ios11/600/228BE6/user.png"}
       />
       <div className='change-profile'>
         <Button
