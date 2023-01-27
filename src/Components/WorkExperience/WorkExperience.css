@@ -1,0 +1,23 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.heading-main{
+    font-size: 35px;
+}
+
+.exp-heading{
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.addnewbtn{
+    display: flex;
+    justify-content: center;
+}
+
+.addnewbtn2{
+    margin-top: 15px;
+}
