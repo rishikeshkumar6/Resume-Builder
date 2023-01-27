@@ -1,4 +1,3 @@
-//SelectYear.js
 import { FormControl, FormHelperText, InputLabel} from "@mui/material";
 import React from 'react'
 import './SelectYear.css'

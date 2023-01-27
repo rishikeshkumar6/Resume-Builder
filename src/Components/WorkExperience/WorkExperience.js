@@ -1,5 +1,3 @@
-// Workexperience.js
-
 import { Divider, Paper, Select, MenuItem, Button, OutlinedInput} from '@mui/material'
 import React from 'react'
 import Input from '../Input/Input'
