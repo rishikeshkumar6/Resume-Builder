@@ -2,7 +2,7 @@ import { Divider, Paper, Select, MenuItem, Button, OutlinedInput} from '@mui/mat
 import React from 'react'
 import Input from '../Input/Input'
 import NextnBackBTN from '../NextnBackBTN/NextnBackBTN'
-import SelectYear from '../Selectyear/SelectYear'
+import SelectYear from '../SelectYear/SelectYear'
 import './WorkExperience.css'
 import { useForm, Controller } from "react-hook-form";
 import { connect } from "react-redux";
