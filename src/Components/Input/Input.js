@@ -13,6 +13,8 @@ const Input = (props) => {
         label={props.label}
         type={props.type}
         name={props.name} 
+        multiline={props.multiline}
+        rows={props.rows}
         // {...props.register(props.name, Checks(props.type, props.name))}
         value={props.value}
         onChange={(event) => props.setValue(event.target.value.toString())}

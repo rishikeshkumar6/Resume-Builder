@@ -52,7 +52,7 @@ const PersonalInfo = (props) => {
   }, []);
 
   const {
-    register,
+    // register,
     handleSubmit,
     formState: { errors },
   } = useForm();
@@ -172,7 +172,7 @@ const PersonalInfo = (props) => {
             label={"First Name"}
             type={"text"}
             name={"firstName"}
-            register={register}
+            // register={register}
             value={props.personalInfo.firstName}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -187,7 +187,7 @@ const PersonalInfo = (props) => {
             label={"Last Name"}
             name={"lastName"}
             type={"text"}
-            register={register}
+            // register={register}
             value={props.personalInfo.lastName}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -202,7 +202,7 @@ const PersonalInfo = (props) => {
             label={"Email"}
             type={"email"}
             name={"email"}
-            register={register}
+            // register={register}
             value={props.personalInfo.email}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -217,7 +217,7 @@ const PersonalInfo = (props) => {
             label={"Mobile Number"}
             type={"number"}
             name={"mobile"}
-            register={register}
+            // register={register}
             value={props.personalInfo.mobile}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -233,7 +233,9 @@ const PersonalInfo = (props) => {
           label={"Address"}
           type={"text"}
           name={"address"}
-          register={register}
+          // multiline={true}
+          // rows={2}
+          // register={register}
           value={props.personalInfo.address}
           setValue={(value) =>
             props.onAddPersonalInfo({
@@ -249,7 +251,7 @@ const PersonalInfo = (props) => {
             label={"City"}
             type={"text"}
             name={"city"}
-            register={register}
+            // register={register}
             value={props.personalInfo.city}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -264,7 +266,7 @@ const PersonalInfo = (props) => {
             label={"State"}
             type={"text"}
             name={"state"}
-            register={register}
+            // register={register}
             value={props.personalInfo.state}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -279,7 +281,7 @@ const PersonalInfo = (props) => {
             label={"Pin Code"}
             type={"number"}
             name={"pinCode"}
-            register={register}
+            // register={register}
             value={props.personalInfo.pinCode}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -295,7 +297,9 @@ const PersonalInfo = (props) => {
           label={"Objective"}
           type={"text"}
           name={"objective"}
-          register={register}
+          multiline={true}
+          rows={4}
+          // register={register}
           value={props.personalInfo.objective}
           setValue={(value) =>
             props.onAddPersonalInfo({
