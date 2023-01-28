@@ -56,13 +56,13 @@ payload: details,
 });
 
 // Action creator for adding new projects
-export const addProjects = (details) => ({
+export const addNewProjects = (details) => ({
 type: actionTypes.ADDNEWPROJECTS,
 payload: details,
 });
 
 // Action creator for adding new achievements
-export const addAchievements = (details) => ({
+export const addNewAchievements = (details) => ({
 type: actionTypes.ADDNEWACHIEVEMENTS,
 payload: details,
 });
@@ -80,13 +80,13 @@ payload: id,
 });
 
 // Action creator for editing an achievement
-export const editAchievements = (achivements) => ({
+export const editAchievement = (achivements) => ({
 type: actionTypes.EDITACHIEVEMENT,
 payload: achivements,
 });
 
 // Action creator for deleting an achievement
-export const deleteAchievements = (id) => ({
+export const deleteAchievement = (id) => ({
 type: actionTypes.DELETEACHIEVEMENT,
 payload: id,
 });
