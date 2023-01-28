@@ -192,7 +192,7 @@ export const keyProjectsReducer = (state = initialProjectsState, action) => {
     // Case to handle DELETEPROJECT action
     case actionTypes.DELETEPROJECT: {
       const newProjects = state.projects.filter(
-        (projects, id) => id !== action.payload
+        (project, id) => id !== action.payload
       );
 
       return { ...state, projects: newProjects };
@@ -204,10 +204,7 @@ export const keyProjectsReducer = (state = initialProjectsState, action) => {
 };
 
 // Reducer function for the achievements state
-export const keyAchievementsReducer = (
-  state = initialAchievementsState,
-  action
-) => {
+export const keyAchievementsReducer = (state = initialAchievementsState, action) => {
   // Switch statement to handle different actions
   switch (action.type) {
     // Case to handle ADDNEWACHIEVEMENTS action
@@ -223,7 +220,7 @@ export const keyAchievementsReducer = (
     // Case to handle DELETEACHIEVEMENT action
     case actionTypes.DELETEACHIEVEMENT: {
       const newAchievements = state.achievements.filter(
-        (achievements, id) => id !== action.payload
+        (achievement, id) => id !== action.payload
       );
 
       return { ...state, achievements: newAchievements };

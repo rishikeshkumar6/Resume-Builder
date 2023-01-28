@@ -13,8 +13,8 @@ export const ADDALLEXPERIENCE = "ADDALLEXPERIENCE";
 
 // Action types for adding and editing skills
 export const ADDNEWSKILLS = "ADDNEWSKILLS";
-export const EDITSKILL = "EDITSKILL";
 export const DELETESKILL = "DELETESKILL";
+export const EDITSKILL = "EDITSKILL";
 
 // Action types for adding education
 export const ADDEDUCATION = "ADDEDUCATION";

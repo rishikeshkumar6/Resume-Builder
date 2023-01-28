@@ -250,7 +250,7 @@ const WorkExperience = (props) => {
           backbtn={"Back"}
         />
       </form>
-    </Paper >
+      </Paper>
   )
 }
 
