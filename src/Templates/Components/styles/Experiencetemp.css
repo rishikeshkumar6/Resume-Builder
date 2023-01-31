@@ -1,0 +1,18 @@
+ 
+.experienceheading {
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  .orgnameexperience,
+  .startendyear {
+    font-size: 12px;
+    margin-left: 10px;
+    font-weight: 400;
+  }
+  
+  .startendyear {
+    font-style: italic;
+    margin-left: 4px;
+  }
