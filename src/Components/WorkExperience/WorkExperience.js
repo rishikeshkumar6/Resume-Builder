@@ -1,4 +1,4 @@
-import { Divider, Paper, Select, MenuItem, Button, OutlinedInput} from '@mui/material'
+import { Divider, Paper, Select, MenuItem, Button, OutlinedInput, } from '@mui/material'
 import React from 'react'
 import Input from '../Input/Input'
 import NextnBackBTN from '../NextnBackBTN/NextnBackBTN'
@@ -32,10 +32,15 @@ const years = [
   "2013",
 ];
 
-
-
 const WorkExperience = (props) => {
   const [loading, setLoading] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm();
 
   const handleBack = () => {
     props.setClick(props.click - 1);
@@ -79,10 +84,7 @@ const WorkExperience = (props) => {
       startYear: "",
       endYear: "",
     });
-  
-
   };
- 
 
   const editJobTitleExperience = (value, id) => {
     const newExperiences = props.experiences.map((experience) => {
@@ -104,14 +106,6 @@ const WorkExperience = (props) => {
     props.setAllExperience(newExperiences);
   };
 
-  const {
-    register,
-    handleSubmit,
-    control,
-    formState: { errors },
-  } = useForm();
-
-  
   return (
     <Paper className='Paper' elevation={4}>
       <h2 className='heading-main'>Work Experience</h2>
@@ -137,7 +131,7 @@ const WorkExperience = (props) => {
                       ? errors[`jobTitle${experience.id}`].message
                       : null
                   }
-                />
+                />        
                 <Input
                   label={"Organisation Name"}
                   type={"text"}
@@ -146,10 +140,12 @@ const WorkExperience = (props) => {
                   setValue={(value) =>
                     editOrganisationNameExperience(value, experience.id)
                   }
-                  error={Boolean(errors[`jobTitle${experience.id}`])}
+                  error={
+                    errors[`organizationName${experience.id}`] ? true : false
+                  }
                   errorMessage={
-                    errors[`jobTitle${experience.id}`]
-                      ? errors[`jobTitle${experience.id}`].message
+                    errors[`organizationName${experience.id}`]
+                      ? errors[`organizationName${experience.id}`].message
                       : null
                   }
                 />
@@ -166,7 +162,7 @@ const WorkExperience = (props) => {
                     render={(props) => {
                       return (
                         <Select
-                        input={<OutlinedInput label="Start Year" />}
+                          input={<OutlinedInput label="Start Year" />}
                           value={props.field.value}
                           onChange={props.field.onChange}
                           error={
@@ -203,7 +199,7 @@ const WorkExperience = (props) => {
                   <Controller
                     render={(props) => (
                       <Select
-                      input={<OutlinedInput label="End Year" />}
+                        input={<OutlinedInput label="End Year" />}
                         value={props.field.value}
                         onChange={props.field.onChange}
                         error={
@@ -237,7 +233,7 @@ const WorkExperience = (props) => {
             <Button sx={{ margin: "15px 0 0 0" }} onClick={addNewExperience} variant="text">
               Add New
             </Button>
-            
+
           </div>
         )}
         <Divider sx={{ margin: "15px 0" }} />
@@ -250,7 +246,7 @@ const WorkExperience = (props) => {
           backbtn={"Back"}
         />
       </form>
-      </Paper>
+    </Paper>
   )
 }
 
@@ -258,4 +254,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(WorkExperience);
-
