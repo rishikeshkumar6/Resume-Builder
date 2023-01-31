@@ -17,9 +17,18 @@
 }
 
 .gridoTwo{
-    display: flex;
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
 }
+
+@media screen and (max-width: 700px) {
+    .grido{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 30px;
+    }
+  }
 
 .deleteicon{
     height: 60px !important
