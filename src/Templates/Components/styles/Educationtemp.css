@@ -1,0 +1,21 @@
+ .templatedetailseducation {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 13px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .templateuniversity,
+  .startendeducation {
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: 400;
+  }
+  
+  .startendeducation {
+    font-style: italic;
+    margin-left: 4px;
+  }
+  
