@@ -5,7 +5,7 @@ import { Divider, MenuItem, OutlinedInput, Paper, Select } from '@mui/material';
 import { useForm, Controller } from "react-hook-form";
 import { useState } from 'react';
 import Input from '../Input/Input';
-import SelectYear from '../SelectYear/SelectYear';
+import SelectYear from '../Selectyear/SelectYear';
 import NextnBackBTN from '../NextnBackBTN/NextnBackBTN';
 
 

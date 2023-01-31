@@ -9,7 +9,7 @@ import SkillTemp from './Components/SkillTemp';
 import { defaultInputs } from './Components/defaultInputs';
 import AchievementTemp from './Components/AchievementTemp';
 import ProjectTemp from './Components/ProjectTemp';
-import './Styles/Template3.css'
+import './styles/Template3.css'
 
 const Template3 = (props) => {
   const personalinfo = props.personalinfo
