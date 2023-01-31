@@ -30,32 +30,22 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   },
 }));
 
+
 const PersonalInfo = (props) => {
+  const [loading, setLoading] = useState(false);
+  const [imgSnackbar, setImgSnackbar] = useState(false);
   const [vertical, ] = useState("top");
   const [horizontal, ] = useState("center");
+  
+
+  const { handleSubmit, register, formState: { errors }} = useForm();
+
+  const [img, setImg] = useState(
+    props.personalInfo.profileImg.length ? props.personalInfo.profileImg : ""
+  );
   const [, setStoreImage] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [img, setImg] = useState(props.personalInfo.profileImg.length ? props.personalInfo.profileImg : "")
-  const [imgSnackbar, setImgSnackbar] = useState(false);
+
   const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    function handleWindowResize() {
-      setWindowSize(getWindowSize());
-    }
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
-
-  const {
-    // register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -64,7 +54,7 @@ const PersonalInfo = (props) => {
     setOpen(false);
   };
 
-  const handleBackNext = (data) => {
+  const handleNext = (data) => {
     if (img.length) {
       setLoading(true);
       props.onAddPersonalInfo({ profileImg: img, ...data });
@@ -76,6 +66,29 @@ const PersonalInfo = (props) => {
       setImgSnackbar(true);
     }
   }
+
+  const BootstrapDialogTitle = (props) => {
+    const { children, onClose, ...other } = props;
+
+    return (
+      <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
+        {children}
+        {onClose ? (
+          <IconButton
+            aria-label="close"
+            onClick={onClose}
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 8,
+              color: (theme) => theme.palette.grey[500],
+            }}>
+            <CloseIcon />
+          </IconButton>
+        ) : null}
+      </DialogTitle>
+    );
+  };
 
   const onCrop = (view) => {
     setImg(view);
@@ -105,28 +118,17 @@ const PersonalInfo = (props) => {
 
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
-  const BootstrapDialogTitle = (props) => {
-    const { children, onClose, ...other } = props;
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
 
-    return (
-      <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
-        {children}
-        {onClose ? (
-          <IconButton
-            aria-label="close"
-            onClick={onClose}
-            sx={{
-              position: "absolute",
-              right: 8,
-              top: 8,
-              color: (theme) => theme.palette.grey[500],
-            }}>
-            <CloseIcon />
-          </IconButton>
-        ) : null}
-      </DialogTitle>
-    );
-  };
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   return (
     <Paper className='Paper' elevation={4} >
@@ -165,14 +167,14 @@ const PersonalInfo = (props) => {
         </BootstrapDialog>
       </div>
       <Divider />
-      <form className='inputs' onSubmit={handleSubmit(handleBackNext)}>
+      <form className='inputs' onSubmit={handleSubmit(handleNext)}>
         <div className='grido'>
           <Input
             className="FirstName"
             label={"First Name"}
             type={"text"}
             name={"firstName"}
-            // register={register}
+            register={register}
             value={props.personalInfo.firstName}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -187,7 +189,7 @@ const PersonalInfo = (props) => {
             label={"Last Name"}
             name={"lastName"}
             type={"text"}
-            // register={register}
+            register={register}
             value={props.personalInfo.lastName}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -202,7 +204,7 @@ const PersonalInfo = (props) => {
             label={"Email"}
             type={"email"}
             name={"email"}
-            // register={register}
+            register={register}
             value={props.personalInfo.email}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -217,7 +219,7 @@ const PersonalInfo = (props) => {
             label={"Mobile Number"}
             type={"number"}
             name={"mobile"}
-            // register={register}
+            register={register}
             value={props.personalInfo.mobile}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -235,7 +237,7 @@ const PersonalInfo = (props) => {
           name={"address"}
           // multiline={true}
           // rows={2}
-          // register={register}
+          register={register}
           value={props.personalInfo.address}
           setValue={(value) =>
             props.onAddPersonalInfo({
@@ -251,7 +253,7 @@ const PersonalInfo = (props) => {
             label={"City"}
             type={"text"}
             name={"city"}
-            // register={register}
+            register={register}
             value={props.personalInfo.city}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -266,7 +268,7 @@ const PersonalInfo = (props) => {
             label={"State"}
             type={"text"}
             name={"state"}
-            // register={register}
+            register={register}
             value={props.personalInfo.state}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -281,7 +283,7 @@ const PersonalInfo = (props) => {
             label={"Pin Code"}
             type={"number"}
             name={"pinCode"}
-            // register={register}
+            register={register}
             value={props.personalInfo.pinCode}
             setValue={(value) =>
               props.onAddPersonalInfo({
@@ -289,7 +291,7 @@ const PersonalInfo = (props) => {
                 pinCode: value,
               })}
             error={errors.pinCode ? true : false}
-            errorMessage={errors.pinCode ? errors.postalCode.message : null}
+            errorMessage={errors.pinCode ? errors.pinCode.message : null}
           />
         </div>
         <Input
@@ -298,8 +300,8 @@ const PersonalInfo = (props) => {
           type={"text"}
           name={"objective"}
           multiline={true}
-          rows={4}
-          // register={register}
+          lines={4}
+          register={register}
           value={props.personalInfo.objective}
           setValue={(value) =>
             props.onAddPersonalInfo({
