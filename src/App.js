@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MyResume from './Pages/MyResume';
 import Navbar from './Components/Navbar/Navbar';
 import DetailFiling from './Pages/DetailFiling'; 
+import SelectTemp from './Templates/Components/SelectTemp';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
         {/* Home route */}
         <Route exact path="/" element={<Home />} />  
         {/* Detail filing route */}
-        <Route exact path="/template/fill-details" element={<DetailFiling />}/>
+        <Route exact path="/template/fill-details" element={ <SelectTemp><DetailFiling /></SelectTemp>}/>
         {/* My Resumes route */}
         <Route exact path="/my/resumes" element={<MyResume />} />
         {/* About Us route */}

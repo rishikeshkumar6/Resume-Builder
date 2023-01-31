@@ -63,6 +63,19 @@ const Education = (props) => {
         <Divider />
         <form onSubmit={handleSubmit(handleNext)}>
           <div className='grido'>
+          <Input
+              label={'Domain'}
+              type={"text"}
+              register={register}
+              name={"domain"}
+              value={props.educationInfo.domain}
+            setValue={(value) =>
+              props.onAddEducation({ ...props.educationInfo, domain: value })
+            }
+            error={errors.domain ? true : false}
+            errorMessage={errors.domain ? errors.domain.message : null}
+            />
+            <div/>
             <Input
               label={'University'}
               type={"text"}

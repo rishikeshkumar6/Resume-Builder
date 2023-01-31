@@ -5,7 +5,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { NavLink } from 'react-router-dom';
 import Logo from '../Assets/mainLogo.png'
 
-
 // Define a custom theme for the navbar with a white primary color
 const theme = createTheme({
   palette: {
@@ -60,7 +59,6 @@ const Navbar = (props) => {
   );
 
   return (
-
     <>
       <Box sx={{ display: "flex" }}>
         <ThemeProvider theme={theme}  >
@@ -70,7 +68,6 @@ const Navbar = (props) => {
                 sx={{ mr: 2, display: { sm: "none" } }} >
                 <MenuIcon />
               </IconButton>
-
               <Typography variant='h6' sx={{
                 flexGrow: 1,
                 display: { sm: "block" },
@@ -96,9 +93,7 @@ const Navbar = (props) => {
                   About Us
                 </NavLink>
               </Box>
-
             </Toolbar>
-
           </AppBar>
         </ThemeProvider>
         <Box >
@@ -109,12 +104,10 @@ const Navbar = (props) => {
               keepmounted: true
             }} sx={{
               display: { xs: "block", sm: "none" },
-
             }}>
             {drawer}
           </Drawer>
         </Box>
-
       </Box>
     </>
   )
