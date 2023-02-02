@@ -1,0 +1,67 @@
+.myresumecontainer {
+    width: 100%;
+    padding: 50px;
+    justify-items: center;
+  }
+  
+  .resume {
+    position: relative;
+  }
+  .resume:hover .black-screen {
+    visibility: visible;
+  }
+  
+  .resume:hover {
+    cursor: pointer;
+  }
+  
+  .myresumebtncontainer {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    display: none;
+  }
+  
+  .resume:hover .myresumebtncontainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 5;
+  }
+  
+  .myresumebtncontainer .MuiButtonBase-root.MuiButton-root.myresumebtn {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    visibility: visible;
+    text-transform: capitalize;
+  }
+  
+  .myresumeempty {
+    width: 100%;
+    display: flex;
+    padding-top: 50px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .my-resumes-container .myresumeempty .emptymyresumetext {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .myresumecontainer {
+      padding: 0px;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .myresumecontainer {
+      justify-content: center;
+      padding: 40px 30px !important;
+    }
+ }

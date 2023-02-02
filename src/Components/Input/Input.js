@@ -1,6 +1,6 @@
 import { TextField } from '@mui/material'
 import React from 'react'
-// import { Checks } from './Checks'
+import { Checks } from './Checks'
 
 const Input = (props) => {
   return (
@@ -15,7 +15,7 @@ const Input = (props) => {
       name={props.name} 
       multiline={props.multiline}
       rows={props.lines}
-      // {...props.register(props.name, Checks(props.type, props.name))} 
+      {...props.register(props.name, Checks(props.type, props.name))} 
       value={props.value}
       onChange={(event) => props.setValue(event.target.value.toString())}
       helperText={props.errorMessage}
