@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react'
 import './styles/MyResume.css'
 import {addAllExperience,addEducation,addPersonalInfo,editSkill,editAchievement,editProject, selectResume,selectTemplate,
@@ -94,14 +93,12 @@ const MyResume = (props) => {
     };
 
   const downloadResume = (id) => {
-    if ( window.confirm("Click here to download") === true){
     // Create a new instance of JsPDF with portrait orientation, point unit, and A4 size
     const report = new JsPDF("portrait", "pt", "a4");
     // Add the HTML content of the resume with the specified id to the PDF document
     report.html(document.getElementById(`${id}report`)).then(() => {
       report.save(`resume.pdf`);
     });
-  }
 };
 
   const setUserData = (resume) => {
