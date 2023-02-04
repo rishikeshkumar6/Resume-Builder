@@ -133,7 +133,7 @@ const bgBlur = () => {
               ])
             );
           }
-          window.location.reload();
+          // window.location.reload();
         })
         .catch((error) => console.log(error.message));
     }
