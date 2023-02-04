@@ -8,7 +8,7 @@ import SkillTemp from './Components/SkillTemp';
 import { defaultInputs } from './Components/defaultInputs';
 import AchievementTemp from './Components/AchievementTemp';
 import ProjectTemp from './Components/ProjectTemp';
-import "./styles/Template1.css"
+import "./styles/Template.css"
 
 const renderExperiences = experiences => experiences.map((experience, index) => (
   <ExperienceTemp key={index} experience={experience} />
@@ -39,20 +39,8 @@ const Template1 = (props) => {
   return (
     <Paper
       sx={{
-        width: {
-          xs: "350px",
-          sm: "400px",
-          md: "450px",
-          lg: "500px",
-          xl: "550px",
-        },
-        height: {
-          xs: "500px",
-          sm: "550px",
-          md: "600px",
-          lg: "650px",
-          xl: "700px",
-        },
+        width: "595px",
+        height: "841px"
       }}
       id={`${props.index}report`}
       elevation={4}>

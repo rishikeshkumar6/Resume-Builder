@@ -1,5 +1,4 @@
-import { Paper } from '@mui/material';
-import { Container } from '@mui/system';
+import { Paper, Container, Divider } from '@mui/material';
 import React from 'react'
 import EducationTemp from './Components/EducationTemp';
 import ExperienceTemp from './Components/ExperienceTemp';
@@ -9,86 +8,78 @@ import SkillTemp from './Components/SkillTemp';
 import { defaultInputs } from './Components/defaultInputs';
 import AchievementTemp from './Components/AchievementTemp';
 import ProjectTemp from './Components/ProjectTemp';
-import './styles/Template4.css'
 
+
+const renderExperiences = experiences => experiences.map((experience, index) => (
+  <ExperienceTemp key={index} experience={experience} />
+));
+
+const renderSkills = skills => skills.map((skill, index) => (
+  <SkillTemp key={index} skill={skill} />
+));
+
+const renderAchievements = achievements => achievements.map((achievement, index) => (
+  <AchievementTemp key={index} achievement={achievement} />
+));
+
+const renderProjects = projects => projects.map((project, index) => (
+  <ProjectTemp key={index} project={project} />
+));
+
+// Template4 component is a functional component
 const Template4 = (props) => {
-  const personalinfo = props.personalinfo
-    ? props.personalinfo
-    : defaultInputs.personal_info;
-  const workexperience = props.workexperience
-    ? props.workexperience
-    : defaultInputs.work_experience;
-  const educationinfo = props.educationinfo
-    ? props.educationinfo
-    : defaultInputs.education_details;
-  const skills = props.skills ? props.skills : defaultInputs.key_skills;
-  const achievements = props.achievements ? props.achievements : defaultInputs.achievements;
-  const projects = props.projects ? props.projects : defaultInputs.projects;
-
+  // Destructure the input props and use default values if they are not provided
+  const { personalinfo = defaultInputs.personal_info,
+    workexperience = defaultInputs.work_experience,
+    educationinfo = defaultInputs.education_details,
+    skills = defaultInputs.key_skills,
+    achievements = defaultInputs.achievements,
+    projects = defaultInputs.projects } = props;
+  // Return the HTML content with the Paper component as the main container
   return (
     <Paper
       sx={{
-        width: {
-          xs: "350px",
-          sm: "400px",
-          md: "450px",
-          lg: "500px",
-          xl: "550px",
-        },
-        height: {
-          xs: "500px",
-          sm: "550px",
-          md: "600px",
-          lg: "650px",
-          xl: "700px",
-        },
+        width: "595px",
+        height: "841px"
       }}
+      style={{backgroundColor:"#FFE6E8"}}
       id={`${props.index}report`}
       elevation={4}>
+      {/* Render the header component */}
       <Header
-        primaryColor={"white"}
-        secondaryColor={"white"}
-        bgColor={"#73264d"}
-        personalInfo={personalinfo}
-        workExperience={workexperience}
-      />
-      <Container>
-        <Heading color={"#73264d"} title={"Professional Experience"} />
-        <ul style={{ paddingBottom: 10 }}>
-          {workexperience.map((experience, index) => {
-            return (
-              <ExperienceTemp
-                key={index}
-                experience={experience}
-              />
-            );
-          })}
-        </ul>
-        <Heading color={"#73264d"} title={"Education"} />
-        <EducationTemp education={educationinfo} />
-        <div className='temponegrid'>
+        primaryColor={"black "}
+        secondaryColor={"black"}
+        personalInfo={personalinfo} workExperience={workexperience} 
+        />
+      <Container >
+        <Divider />
+          <div style={{ paddingBottom: 25, paddingTop: 15 }}>
+            <Heading color={"black"} title={"Professional Experience"} />
+            <ul >
+              {renderExperiences(workexperience)}
+            </ul>
+          </div>
+          <div className='temponegrid'  >
           <div>
-            <Heading color={"#73264d"} title={"Key Skills"} />
+            <Heading color={"black"} title={"Education"} />
+            <EducationTemp education={educationinfo} />
+          </div>
+          <div>
+            <Heading color={"black"} title={"Key Skills"} />
             <ul style={{ marginBottom: 10 }}>
-              {skills.map((skill, index) => {
-                return <SkillTemp key={index} skill={skill} />;
-              })}
+              {renderSkills(skills)}
             </ul>
           </div>
           <div>
-            <Heading color={"#73264d"} title={"Achievements"} />
+            <Heading color={"black"} title={"Achievements"} />
             <ul style={{ marginBottom: 10 }}>
-              {achievements.map((achievement, index) => {
-                return <AchievementTemp key={index} achievement={achievement} />;
-              })}
+              {renderAchievements(achievements)}
             </ul>
           </div>
           <div>
-            <Heading color={"#73264d"} title={"Projects"} />
+            <Heading color={"black"} title={"Projects"} />
             <ul style={{ marginBottom: 10 }}>
-              {projects.map((project, index) => {
-                return <ProjectTemp key={index} project={project} />;
-              })}
+              {renderProjects(projects)}
             </ul>
           </div>
         </div>
@@ -96,5 +87,4 @@ const Template4 = (props) => {
     </Paper>
   );
 };
-
 export default Template4;

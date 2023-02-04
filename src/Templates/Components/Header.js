@@ -65,7 +65,7 @@ const Header = (props) => {
       {/* Display the user's objective */}
       <p
         style={{ color: props.secondaryColor,
-          fontSize: "14px"}}>
+          fontSize:"14px", margin:"5px"}}>
         {props.personalInfo.objective}
       </p>
       </div>
