@@ -48,6 +48,7 @@ const Preview = (props) => {
 
   // Handles the saving of the resume
   const handleSave = () => {
+    if ( window.confirm("Click here to download") === true){
     if (resumeName.length === 0) {
       setError("*Please fill this field");
     } else {
@@ -121,7 +122,8 @@ const Preview = (props) => {
         })
         .catch((error) => console.log(error.message));
     }
-  };
+  }
+};
 
   const handleBack = () => {
     props.setClick(props.click - 1);
