@@ -11,59 +11,56 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import { useForm } from "react-hook-form";
 
-
-
 const mapStateToProps = (state) => ({
-  personalInfo: state.personalInfoReducer.personalInfo,
+  personalInfo: state.personalInfoReducer.personalInfo, // mapping state to get personalInfo from the reducer
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onAddPersonalInfo: (details) => dispatch(addPersonalInfo(details)),
+  onAddPersonalInfo: (details) => dispatch(addPersonalInfo(details)), // dispatching action to add personal info
 });
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
-    padding: theme.spacing(2),
+    padding: theme.spacing(2), // setting padding for dialog content
   },
   "& .MuiDialogActions-root": {
-    padding: theme.spacing(1),
+    padding: theme.spacing(1), // setting padding for dialog actions
   },
 }));
 
 
 const PersonalInfo = (props) => {
-  const [loading, setLoading] = useState(false);
-  const [imgSnackbar, setImgSnackbar] = useState(false);
-  const [vertical, ] = useState("top");
-  const [horizontal, ] = useState("center");
-  
+  const [loading, setLoading] = useState(false); // state to control loading spinner
+  const [imgSnackbar, setImgSnackbar] = useState(false); // state to control image snackbar
+  const [vertical, ] = useState("top"); // state to control vertical position of snackbar
+  const [horizontal, ] = useState("center"); // state to control horizontal position of snackbar
 
-  const { handleSubmit, register, formState: { errors }} = useForm();
+  const { handleSubmit, register, formState: { errors }} = useForm(); // using useForm hook to handle form submissions
 
   const [img, setImg] = useState(
-    props.personalInfo.profileImg.length ? props.personalInfo.profileImg : ""
+    props.personalInfo.profileImg.length ? props.personalInfo.profileImg : "" // state to control profile image
   );
-  const [, setStoreImage] = useState([]);
+  const [, setStoreImage] = useState([]); // state to store images
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); // state to control modal open/close
 
-  const handleClickOpen = () => {
+  const handleClickOpen = () => { // function to open the modal
     setOpen(true);
   };
-  const handleClose = () => {
+  const handleClose = () => { // function to close the modal
     setOpen(false);
   };
 
-  const handleNext = (data) => {
+  const handleNext = (data) => { // function to handle form submission
     if (img.length) {
       setLoading(true);
-      props.onAddPersonalInfo({ profileImg: img, ...data });
+      props.onAddPersonalInfo({ profileImg: img, ...data }); // calling onAddPersonalInfo function from mapDispatchToProps to add personal info
       setTimeout(() => {
         setLoading(false);
-        props.setClick(props.click + 1)
+        props.setClick(props.click + 1) // incrementing the click state by 1
       }, 1000);
     } else {
-      setImgSnackbar(true);
+      setImgSnackbar(true); // setting imgSnackbar to true if no profile image is selected
     }
   }
 
@@ -81,7 +78,7 @@ const PersonalInfo = (props) => {
               position: "absolute",
               right: 8,
               top: 8,
-              color: (theme) => theme.palette.grey[500],
+              color: (theme) => theme.palette.grey[500], // setting color of close icon
             }}>
             <CloseIcon />
           </IconButton>
@@ -90,38 +87,45 @@ const PersonalInfo = (props) => {
     );
   };
 
-  const onCrop = (view) => {
-    setImg(view);
+// Set the image after cropping it using the onCrop function
+const onCrop = (view) => {
+  setImg(view);
   };
-
+  
+  // Set the image to null when the cropping process is closed
   const onClose = (view) => {
-    setImg(null);
+  setImg(null);
   };
-
+  
+  // Save the cropped image and set the state of the modal to closed
   const saveImage = () => {
-    // storeImage([])
-    setStoreImage([{ img }]);
-    setOpen(false);
+  // storeImage([])
+  setStoreImage([{ img }]);
+  setOpen(false);
   };
-
+  
+  // Close the snackbar if the close icon or outside of the snackbar is clicked
   const handleCloseSnackbar = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
-    setImgSnackbar(false);
+  if (reason === "clickaway") {
+  return;
+  }
+  setImgSnackbar(false);
   };
-
+  
+  // Get the inner width and height of the window
   const getWindowSize = () => {
-    const { innerWidth, innerHeight } = window;
-    return { innerWidth, innerHeight };
+  const { innerWidth, innerHeight } = window;
+  return { innerWidth, innerHeight };
   };
-
+  
+  // Set the state of windowSize to the value returned from getWindowSize function
   const [windowSize, setWindowSize] = useState(getWindowSize());
-
+  
+  // Use Effect hook to handle window resize event
   useEffect(() => {
-    function handleWindowResize() {
-      setWindowSize(getWindowSize());
-    }
+  function handleWindowResize() {
+  setWindowSize(getWindowSize());
+  }
 
     window.addEventListener("resize", handleWindowResize);
 
