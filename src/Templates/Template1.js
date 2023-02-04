@@ -11,7 +11,9 @@ import AchievementTemp from './Components/AchievementTemp';
 import ProjectTemp from './Components/ProjectTemp';
 import "./styles/Template1.css"
 
+// Template1 component is a functional component
 const Template1 = (props) => {
+  // Destructure the input props and use default values if they are not provided
   const personalinfo = props.personalinfo
     ? props.personalinfo
     : defaultInputs.personal_info;
@@ -25,6 +27,7 @@ const Template1 = (props) => {
   const achievements = props.achievements ? props.achievements : defaultInputs.achievements;
   const projects = props.projects ? props.projects : defaultInputs.projects;
 
+  // Return the HTML content with the Paper component as the main container
   return (
     <Paper
       sx={{
@@ -45,6 +48,7 @@ const Template1 = (props) => {
       }}
       id={`${props.index}report`}
       elevation={4}>
+      {/* Render the header component */}
       <Header
         primaryColor={"brown"}
         secondaryColor={"black"}

@@ -8,15 +8,17 @@ import Input from '../Input/Input';
 import SelectYear from '../Selectyear/SelectYear';
 import NextnBackBTN from '../NextnBackBTN/NextnBackBTN';
 
-
+// Map the state from the Redux store to the component's props
 const mapStateToProps = (state) => ({
   educationInfo: state.educationDetailsReducer.educationInfo,
 });
 
+// Dispatch action creators to the Redux store
 const mapDispatchToProps = (dispatch) => ({
   onAddEducation: (details) => dispatch(addEducation(details)),
 });
 
+// Years array to be used in the select year component
 const years = [
   "2023",
   "2022",
@@ -33,8 +35,10 @@ const years = [
 
 
 const Education = (props) => {
+  // State to control loading of the form
   const [loading, setLoading] = useState(false);
 
+  // Function to handle next button click
   const handleNext = (data) => {
     setLoading(true);
     props.onAddEducation(data);
@@ -44,11 +48,12 @@ const Education = (props) => {
     }, 1000);
   };
 
-
+  // Function to handle back button click
   const handleBack = () => {
     props.setClick(props.click - 1);
   };
 
+  // Hook to handle form operations
   const {
     register,
     handleSubmit,
@@ -58,9 +63,11 @@ const Education = (props) => {
 
   return (
     <div>
+      {/* Paper component to show the form */}
       <Paper className='Paper' elevation={4}>
         <h2 className='heading-main'>Education Details</h2>
         <Divider />
+        {/* Form to capture education details */}
         <form onSubmit={handleSubmit(handleNext)}>
           <div className='grido'>
           <Input

@@ -7,6 +7,7 @@ import { Button, CircularProgress, Container, TextField } from '@mui/material';
 import { templates } from "../../templates";
 
 
+// Maps the state from the store to the props of the component
 const mapStateToProps = (state) => ({
   selectedTemplateId: state.selectedTemplateReducer.selectedTemplateId,
   selectedResumeId: state.selectedTemplateReducer.selectedResumeId,
@@ -18,15 +19,20 @@ const mapStateToProps = (state) => ({
   projects: state.keyProjectsReducer.projects,
 });
 
+// Maps dispatch actions to the props of the component
 const mapDispatchToProps = (dispatch) => ({});
 
+// The Preview component
 const Preview = (props) => {
+  // State variables to keep track of loading status and name of the resume
   const [loading, setLoading] = useState(false);
   const [resumeName, setResumeName] = useState("");
   const [error, setError] = useState("");
 
+  // A helper function to get the template component based on the selected template id
   const getTemplate = (template, index) => {
     if (template.id === props.selectedTemplateId) {
+      // Clones the selected template component and passes the required props
       const TemplateComp = React.cloneElement(template.template, {
         personalinfo: props.personalInfo,
         workexperience: props.experiences,
@@ -40,6 +46,7 @@ const Preview = (props) => {
     }
   };
 
+  // Handles the saving of the resume
   const handleSave = () => {
     if (resumeName.length === 0) {
       setError("*Please fill this field");

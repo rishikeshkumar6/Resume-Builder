@@ -9,15 +9,18 @@ import { connect } from "react-redux";
 import { addAllExperience, addExperience } from "../../Redux/actions/actions"
 import { useState } from 'react'
 
+// mapping state from the store to component's props
 const mapStateToProps = (state) => ({
   experiences: state.workExperienceReducer.experiences,
 });
 
+// mapping dispatch actions to component's props
 const mapDispatchToProps = (dispatch) => ({
   setExperience: (experience) => dispatch(addExperience(experience)),
   setAllExperience: (experiences) => dispatch(addAllExperience(experiences)),
 });
 
+// array of years for the select component
 const years = [
   "2023",
   "2022",
@@ -35,6 +38,7 @@ const years = [
 const WorkExperience = (props) => {
   const [loading, setLoading] = useState(false);
 
+  // hook for form management with react-hook-form
   const {
     register,
     handleSubmit,
@@ -42,16 +46,20 @@ const WorkExperience = (props) => {
     formState: { errors },
   } = useForm();
 
+  // handles back button click
   const handleBack = () => {
     props.setClick(props.click - 1);
   };
 
+  // handles next button click
   const handleNext = (data) => {
     setLoading(true);
 
+    // dividing data into two objects to store experience of two jobs
     let experienceOne = {};
     let experienceTwo = {};
 
+    // looping through the data to divide into two experiences
     for (let index in data) {
       if (index.includes("1")) {
         experienceOne[index.slice(0, index.length - 1)] = data[index];
@@ -60,7 +68,7 @@ const WorkExperience = (props) => {
       }
     }
 
-
+    // storing the experience into the store based on the length of experienceTwo
     if (Object.keys(experienceTwo).length) {
       props.setAllExperience([
         { ...experienceOne, id: 1 },
@@ -70,12 +78,14 @@ const WorkExperience = (props) => {
       props.setAllExperience([{ ...experienceOne, id: 1 }]);
     }
 
+    // waiting for a second to show the loading and then incrementing the step
     setTimeout(() => {
       setLoading(false);
       props.setClick(props.click + 1);
     }, 1000);
   };
 
+  // action to add new experience to the store
   const addNewExperience = () => {
     props.setExperience({
       id: props.experiences.length + 1,
@@ -131,7 +141,7 @@ const WorkExperience = (props) => {
                       ? errors[`jobTitle${experience.id}`].message
                       : null
                   }
-                />        
+                />
                 <Input
                   label={"Organisation Name"}
                   type={"text"}

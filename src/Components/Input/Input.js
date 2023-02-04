@@ -1,10 +1,11 @@
 import { TextField } from '@mui/material'
 import React from 'react'
 import { Checks } from './Checks'
-
+// The component Input takes in props and returns a Material UI TextField component
 const Input = (props) => {
   return (
     <div>
+      {/* The TextField component with the following props */}
     <TextField
       error={props.error}
       // error={props.value === "" ? true : false}
