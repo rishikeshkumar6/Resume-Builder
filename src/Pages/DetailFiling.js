@@ -9,10 +9,15 @@ import Achievements from '../Components/Achievements/Achievements'
 import Projects from '../Components/Projects/Projects'
 import Preview from '../Components/Preview/Preview'
 
+// DetailFiling component that renders different components based on the value of 'click' state
+
 const DetailFiling = (props) => {
+    // Declare and initialize the 'click' state with 0
+
   const [click, setClick] = useState(0)
   return (
     <div>
+          {/* Conditional rendering of the components */}
       {click === 6 ? null : (
         <div className='detailfilling'>
           <SideBar click={click} setClick={setClick} />

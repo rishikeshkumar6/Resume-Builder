@@ -135,6 +135,7 @@ const WorkExperience = (props) => {
                 <Input
                   label={"Organisation Name"}
                   type={"text"}
+                  register={register}
                   name={"organizationName" + experience.id}
                   value={experience.organizationName}
                   setValue={(value) =>

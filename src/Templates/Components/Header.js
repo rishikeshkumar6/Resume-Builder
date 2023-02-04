@@ -29,11 +29,15 @@ const Header = (props) => {
               className="usernametemplate">
               {props.personalInfo.firstName + " " + props.personalInfo.lastName}
             </h2>
-            <p
-              style={{ color: props.secondaryColor }}
-              className="designationuser">
+            <h3 style={{ marginLeft: "5px" }}>
               {props.workExperience[0].jobTitle}
-            </p>
+            </h3>
+            <h5 style={{ marginLeft: "5px" }}>
+            {props.personalInfo.mobile} 
+            </h5>
+            <h5 style={{ marginLeft: "5px" }}>
+            {props.personalInfo.email}
+            </h5>
           </div>
         </div>
         <p
@@ -49,19 +53,24 @@ const Header = (props) => {
 
         </p>
       </div>
-      <p
-        style={{ color: props.secondaryColor, marginLeft: '5px' }}
-        className="usermobilemailtemplate">
-        {props.personalInfo.mobile}
-      </p>
-      <p
-        style={{ color: props.secondaryColor, marginLeft: '5px' }}
-        className="usermobilemailtemplate">
+      {/* <p
+        style={{
+          color: props.secondaryColor, marginLeft: '5px', padding: "0px 20px 5px",
+          fontSize: "16px",
+          fontWeight: "550"
+        }}>
+        Mobile: {props.personalInfo.mobile} {" "} Mail:{props.personalInfo.email}
+      </p> */}
+      {/* <p
+        style={{ color: props.secondaryColor, marginLeft: '5px' ,padding: "0px 20px 5px",
+          fontSize: "16px",
+          fontWeight: "550" }}>
         {props.personalInfo.email}
-      </p>
+      </p> */}
       <p
-        style={{ color: props.secondaryColor }}
-        className="aboutusertemplate">
+        style={{ color: props.secondaryColor, padding: "0px 20px 5px",
+          fontSize: "16px",
+          fontWeight: "550" }}>
         {props.personalInfo.objective}
       </p>
     </div>
