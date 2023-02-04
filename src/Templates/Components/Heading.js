@@ -2,6 +2,7 @@ import React from 'react'
 import './styles/Heading.css'
 
 const Heading = (props) => {
+// The component returns the title and a horizontal line with the color specified in the props
     return (
       <div>
         <h2

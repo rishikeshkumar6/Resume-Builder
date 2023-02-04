@@ -1,7 +1,9 @@
 import React from 'react'
 import './styles/Educationtemp.css'
 
+// EducationTemp component to display education details
 const EducationTemp = (props) => {
+  // render an h3 element with the education details
   return (
     <h3 className="templatedetailseducation">
       {props.education.degree} in {props.education.domain}{" "}
