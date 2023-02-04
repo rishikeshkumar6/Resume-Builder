@@ -7,45 +7,51 @@ import Input from '../Input/Input';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import NextnBackBTN from '../NextnBackBTN/NextnBackBTN';
 
+// Mapping state and dispatch functions to props
 const mapStateToProps = (state) => ({
-  projects: state.keyProjectsReducer.projects,  
+projects: state.keyProjectsReducer.projects,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onaddNewProjects: () => dispatch(addNewProjects()),
-  onEditProject: (projects) => dispatch(editProject(projects)),
-  onDeleteProject: (index) => dispatch(deleteProject(index)),
+onaddNewProjects: () => dispatch(addNewProjects()),
+onEditProject: (projects) => dispatch(editProject(projects)),
+onDeleteProject: (index) => dispatch(deleteProject(index)),
 });
 
-
+// The main component
 const Projects = (props) => {
-  const [loading, setLoading] = useState(false);
+// State for loading
+const [loading, setLoading] = useState(false);
 
+// Setting up the form using the react-hook-form library
+const {
+register,
+handleSubmit,
+formState: { errors },
+} = useForm();
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+// Function to handle back button
+const handleBack = () => {
+props.setClick(props.click - 1);
+};
 
-  const handleBack = () => {
-    props.setClick(props.click - 1);
-  };
+// Function to handle next button
+const handleNext = (data) => {
+setLoading(true);
+setTimeout(() => {
+setLoading(false);
+props.setClick(props.click + 1);
+}, 1000);
+}
 
-  const handleNext = (data) => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      props.setClick(props.click + 1);
-    }, 1000);
-  }
-
-  const onEditProject = (value, id) => {
-    const newProjects = props.projects.map((project, index) => {
-      if (index === id) {
-        return value;
-      } else return project;
-    });
+// Function to edit a project
+const onEditProject = (value, id) => {
+// Map through the projects and update the specified project
+const newProjects = props.projects.map((project, index) => {
+if (index === id) {
+return value;
+} else return project;
+});
 
     props.onEditProject(newProjects);
   };

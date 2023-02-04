@@ -7,31 +7,32 @@ import Input from '../Input/Input';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import NextnBackBTN from '../NextnBackBTN/NextnBackBTN';
 
+// Map state to props
 const mapStateToProps = (state) => ({
   skills: state.keySkillsReducer.skills,
 });
 
+// Map dispatch actions to props
 const mapDispatchToProps = (dispatch) => ({
   onAddNewSkill: () => dispatch(addNewSkills()),
   onEditSkill: (skills) => dispatch(editSkill(skills)),
   onDeleteSkill: (index) => dispatch(deleteSkill(index)),
 });
 
-
+// KeySkill component
 const KeySkill = (props) => {
+  // State for loading 
   const [loading, setLoading] = useState(false);
+  
+  // useForm hook for form handling
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
+  // Handle go back button click
   const handleBack = () => {
     props.setClick(props.click - 1);
   };
 
+  // Handle next button click
   const handleNext = (data) => {
     setLoading(true);
     setTimeout(() => {
@@ -40,13 +41,13 @@ const KeySkill = (props) => {
     }, 1000);
   }
 
+  // Handle skill edit
   const onEditSkill = (value, id) => {
     const newSkills = props.skills.map((skill, index) => {
       if (index === id) {
         return value;
       } else return skill;
     });
-
     props.onEditSkill(newSkills);
   };
 
