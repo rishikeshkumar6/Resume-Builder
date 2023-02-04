@@ -30,17 +30,8 @@
     }
   }
 
-  @media screen and (max-width: 680px) {
-    .previewcontainer {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    grid-gap: 10px;
-    }
-  }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 650px) {
     .previewcontainer {
     width: 100%;
     display: grid;
