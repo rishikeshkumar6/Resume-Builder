@@ -5,6 +5,7 @@ import JsPDF from "jspdf";
 import uniqid from "uniqid";
 import { Button, CircularProgress, Container, TextField } from '@mui/material';
 import { templates } from "../../templates";
+import Download from '../Download/Download';
 
 
 // Maps the state from the store to the props of the component
@@ -28,6 +29,7 @@ const Preview = (props) => {
   const [loading, setLoading] = useState(false);
   const [resumeName, setResumeName] = useState("");
   const [error, setError] = useState("");
+  const [download, setDownload] = useState(false);
 
   // A helper function to get the template component based on the selected template id
   const getTemplate = (template, index) => {
@@ -46,9 +48,22 @@ const Preview = (props) => {
     }
   };
 
+  const openDownload = async () => {
+    setDownload(true)
+
+
+    setTimeout(() => {
+      setDownload(false)
+    }, 2000);
+}
+
+const bgBlur = () => {
+  const blur = document.getElementById("main");
+  blur.classList.toggle('active');
+}
+
   // Handles the saving of the resume
   const handleSave = () => {
-    if ( window.confirm("Click here to download") === true){
     if (resumeName.length === 0) {
       setError("*Please fill this field");
     } else {
@@ -122,7 +137,7 @@ const Preview = (props) => {
         })
         .catch((error) => console.log(error.message));
     }
-  }
+
 };
 
   const handleBack = () => {
@@ -130,6 +145,7 @@ const Preview = (props) => {
   };
 
   return (
+    <>
     <Container
       sx={{
         padding: {
@@ -170,7 +186,7 @@ const Preview = (props) => {
                 <CircularProgress size={25} />
               ) : (
                 <Button
-                  onClick={handleSave}
+                  onClick={() => { (handleSave()); (openDownload());  bgBlur(); }}
                   className="btncreate"
                   variant="contained">
                   Save
@@ -181,6 +197,8 @@ const Preview = (props) => {
         </div>
       </div>
     </Container>
+      {download === true ? <Download /> : null}
+    </>
   );
 };
 
