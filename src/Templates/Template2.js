@@ -50,6 +50,7 @@ const Template2 = (props) => {
         secondaryColor={"black"}
         bgColor={"#ABEBC6"} personalInfo={personalinfo} workExperience={workexperience} />
       <Container>
+      <br />
         <div className='temponegrid'>
           <div>
             <Heading color={"#196F3D"} title={"Professional Experience"} />

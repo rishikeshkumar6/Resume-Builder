@@ -47,6 +47,7 @@ const Template1 = (props) => {
       {/* Render the header component */}
       <Header personalInfo={personalinfo} workExperience={workexperience} />
       <Container>
+      <br />
         <Heading color={"brown"} title={"Professional Experience"} />
         <ul style={{ paddingBottom: 10 }}>
           {renderExperiences(workexperience)}

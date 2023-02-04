@@ -1,22 +1,20 @@
-
-
-  .skill{
-    font-size: 13px;
-    font-weight: 400;
-    margin-bottom: 4px;
-    text-align: left;
-  }
+.skill{
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  text-align: left;
+}
 
 .project{
-    font-size: 13px;
-    font-weight: 400;
-    margin-bottom: 4px;
-    text-align: left;
-  }
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  text-align: left;
+}
 
 .achievement{
-    font-size: 13px;
-    font-weight: 400;
-    margin-bottom: 4px;
-    text-align: left;
-  }
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  text-align: left;
+}

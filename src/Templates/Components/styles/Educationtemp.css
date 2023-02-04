@@ -1,6 +1,5 @@
-
- .templatedetailseducation {
-  font-size: 13px;
+.templatedetailseducation {
+  font-size: 18px;
   font-weight: 600;
   text-align: left;
   margin-top: 15px;
@@ -9,7 +8,7 @@
   
   .templateuniversity,
   .startendeducation {
-    font-size: 12px;
+    font-size: 17px;
     margin-left: 10px;
     font-weight: 400;
   }

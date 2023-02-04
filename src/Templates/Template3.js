@@ -54,7 +54,7 @@ const Template3 = (props) => {
         secondaryColor={"#000000"}
         bgColor={"#98AFC7"} />
       <Container>
-        <br></br>
+        <br />
         <div style={{ paddingBottom: 10 }}>
           <Heading color={"#191970"} title={"Professional Experience"} />
           <ul style={{ paddingBottom: 10 }}>
