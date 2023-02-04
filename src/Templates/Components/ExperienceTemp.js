@@ -9,11 +9,11 @@ const ExperienceTemp = (props) => {
     <Container>
       <li>
         <h3 className="experienceheading">
-          {props.experience.jobTitle}{" "}
-          <span className="orgnameexperience">
-            {props.experience.organizationName}
+        {props.experience.jobTitle}{" "}
+          <span className="orgnameexperience" style={{fontWeight:"500"}}>
+           {"-"} {props.experience.organizationName}
           </span>
-          <span className="startendyear">
+          <span className="startendyear" style={{fontWeight:"400"}}>
             ({props.experience.startYear} - {props.experience.endYear})
           </span>
         </h3>

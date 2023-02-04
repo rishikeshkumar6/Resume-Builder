@@ -45,30 +45,33 @@ const Template1 = (props) => {
       id={`${props.index}report`}
       elevation={4}>
       {/* Render the header component */}
-      <Header personalInfo={personalinfo} workExperience={workexperience} />
+      <Header 
+      primaryColor={"#4A235A"}
+        secondaryColor={"black"}
+        bgColor={"#D7BDE2"}personalInfo={personalinfo} workExperience={workexperience} />
       <Container>
       <br />
-        <Heading color={"brown"} title={"Professional Experience"} />
+        <Heading color={"#4A235A"} title={"Professional Experience"} />
         <ul style={{ paddingBottom: 10 }}>
           {renderExperiences(workexperience)}
         </ul>
-        <Heading color={"brown"} title={"Education"} />
+        <Heading color={"#4A235A"} title={"Education"} />
         <EducationTemp education={educationinfo} />
         <div className='temponegrid'>
           <div>
-            <Heading color={"brown"} title={"Key Skills"} />
+            <Heading color={"#4A235A"} title={"Key Skills"} />
             <ul style={{ marginBottom: 10 }}>
               {renderSkills(skills)}
             </ul>
           </div>
           <div>
-            <Heading color={"brown"} title={"Achievements"} />
+            <Heading color={"#4A235A"} title={"Achievements"} />
             <ul style={{ marginBottom: 10 }}>
               {renderAchievements(achievements)}
             </ul>
           </div>
           <div>
-            <Heading color={"brown"} title={"Projects"} />
+            <Heading color={"#4A235A"} title={"Projects"} />
             <ul style={{ marginBottom: 10 }}>
               {renderProjects(projects)}
             </ul>
