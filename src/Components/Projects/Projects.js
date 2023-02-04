@@ -108,7 +108,7 @@ return value;
             goBack={handleBack}
             loading={loading}
             click={props.click}
-            nextbtn={"Next"}
+            nextbtn={"Preview"}
             backbtn={"Back"}
           />
         </form>
