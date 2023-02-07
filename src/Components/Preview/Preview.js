@@ -101,7 +101,7 @@ const bgBlur = () => {
                 "resumes",
                 JSON.stringify(allNewResumes)
               );
-              window.location.reload();
+              // window.location.reload();
               return;
             }
             newResumes.push({
