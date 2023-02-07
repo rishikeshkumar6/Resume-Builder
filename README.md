@@ -1,7 +1,7 @@
 <html>
   <body>
     <h1>Ninja-Resume Builder</h1>
-    <p>Hosted Link: <a href="https://ninja-resume.netlify.app/" target="_black">https://ninja-resume.netlify.app/</a></p>
+    <p>Hosted Link: <a href="https://ninja-resume.netlify.app/" target="_blank">https://ninja-resume.netlify.app/</a></p>
     <p>Welcome to the Resume Builder project! This project was developed by a team of individuals with the goal of helping you create a high-quality and professional resume in just 5 minutes. With the use of cutting-edge technologies and one of the best available resume templates, you can create a resume that accurately reflects your experiences, skills, and achievements.</p>
     <h2>Team Members</h2>
     <p>The Resume Builder project was developed by a dedicated team of individuals who bring a wealth of experience and expertise to the table. They include:</p>
