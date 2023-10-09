@@ -1,12 +1,8 @@
 import {
-  WhatsApp,
-  Facebook,
   LinkedIn,
-  Instagram,
-  Twitter,
-  Reddit,
   Email,
 } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import "./styles/About.css";
@@ -76,81 +72,30 @@ const AboutUs = () => {
               marginTop: "25px",
             }}
           >
-            Please share your with friends
+           Contact Us
           </Typography>
         </Stack>
                 {/* Social media icons */}
         <Box className="icons">
-          <a
-            href="https://web.whatsapp.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <WhatsApp
-              className="WhatsApp"
-              sx={{ fontSize: "35px", margin: 1 }}
-            ></WhatsApp>
-          </a>
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Facebook
-              className="Facebook"
-              sx={{ fontSize: "35px", margin: 1 }}
-            ></Facebook>
-          </a>
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LinkedIn
+         
+          <Link to="https://www.linkedin.com/in/rishikesh-kumar-singh-4957bb250/">
+          <LinkedIn
               className="LinkedIn"
               sx={{ fontSize: "35px", margin: 1 }}
             ></LinkedIn>
-          </a>
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Instagram
-              className="Instagram"
-              sx={{ fontSize: "35px", margin: 1 }}
-            ></Instagram>
-          </a>
-          <a
-            href="https://mail.google.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          </Link>
+           
+        
+         
+            <a href="mailto:rishikeshkumarsingh810@gmail.com">
             <Email
               className="Email"
               sx={{ fontSize: "35px", margin: 1 }}
             ></Email>
-          </a>
-          <a
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Twitter
-              className="Twitter"
-              sx={{ fontSize: "35px", margin: 1 }}
-            ></Twitter>
-          </a>
-          <a
-            href="https://www.reddit.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Reddit
-              className="Reddit"
-              sx={{ fontSize: "35px", margin: 1 }}
-            ></Reddit>
-          </a>
+            </a>
+           
+         
+          
         </Box>
       </Stack>
     </div>
