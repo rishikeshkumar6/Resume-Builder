@@ -1,11 +1,11 @@
-# Build-Your-CV
-Hosted Link: https://build-your-cv.netlify.app/
+## Build-Your-CV
+# Hosted Link: https://build-your-cv.netlify.app/
 
-Roadmap
+# Roadmap
 The development of the Resume Builder involved several stages, including:
 
-React app: The foundation of the project was built using React, a popular JavaScript library for building user interfaces.
-Navbar: The navigation bar provides users with easy access to different sections of the application.
+• React app: The foundation of the project was built using React, a popular JavaScript library for building user interfaces.
+• Navbar: The navigation bar provides users with easy access to different sections of the application.
 About Us: A section that provides information about the development team and their goals for the project.
 Home: The main landing page for the application.
 Detail-filling page: The page where users fill in their personal information, work experience, education, skills, achievements, and projects.
