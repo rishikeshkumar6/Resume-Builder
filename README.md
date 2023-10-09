@@ -6,7 +6,7 @@
     <h2>Roadmap</h2>
     <p>The development of the Resume Builder involved several stages, including:</p>
     <ul>
-      <li>React app: The foundation of the project was built using React, a popular JavaScript library for building user interfaces.</li>
+      <li>React app: The foundation of the project was built using React, a popular JavaScript library for building user interface.</li>
       <li>Navbar: The navigation bar provides users with easy access to different sections of the application.</li>
       <li>About Us: A section that provides information about the development team and their goals for the project.</li>
       <li>Home: The main landing page for the application.</li>
