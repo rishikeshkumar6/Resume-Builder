@@ -4,7 +4,7 @@
 # Roadmap
 The development of the Resume Builder involved several stages, including:
 
-• React app: The foundation of the project was built using React, a popular JavaScript library for building user interfaces.
+* React app: The foundation of the project was built using React, a popular JavaScript library for building user interfaces.-
 • Navbar: The navigation bar provides users with easy access to different sections of the application.
 About Us: A section that provides information about the development team and their goals for the project.
 Home: The main landing page for the application.
