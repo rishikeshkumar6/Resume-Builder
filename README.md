@@ -20,7 +20,7 @@ The development of the Resume Builder involved several stages, including:
 - Project: A section where users enter information about their past projects and their role in each project.
 - Templates and preview: Users can choose from a variety of templates and preview their resume before downloading it.
 - My Resume: The final version of the user's resume, ready for download.
-- Technologies Used
+  # Technologies Used
 - React: A popular JavaScript library for building user interfaces.
 - JSpdf: A library used to download the user's resume in PDF format.
 - Redux: A state management tool used to manage the application's data and ensure a seamless user experience.
